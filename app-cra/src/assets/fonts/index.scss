@@ -1,6 +1,30 @@
 @font-face {
   font-family: 'ns';
-  src: url(./NotoSansKR-Black.otf) format('embedded-opentype');
-  font-style: normal;
-  font-weight: normal;
+  src: url('./NotoSans/NotoSansKR-Black.otf') format('embedded-opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'ns';
+  src: url('./NotoSans/NotoSansKR-Bold.otf') format('embedded-opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'ns';
+  src: url('./NotoSans/NotoSansKR-Light.otf') format('embedded-opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'ns';
+  src: url('./NotoSans/NotoSansKR-Medium.otf') format('embedded-opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'ns';
+  src: url('./NotoSans/NotoSansKR-Regular.otf') format('embedded-opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'ns';
+  src: url('./NotoSans/NotoSansKR-Thin.otf') format('embedded-opentype');
+  font-weight: 800;
 }

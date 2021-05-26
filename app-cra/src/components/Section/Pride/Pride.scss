@@ -1,0 +1,53 @@
+@import '../../../assets/style/functions.scss';
+$route: 'https://res.tutoring.co.kr/res/images/evt/com';
+
+.Pride {
+  padding: 100px 0;
+  background: #000;
+  .title {
+    color: #cf9f50;
+    font-size: 16px;
+    text-align: center;
+    strong {
+      display: block;
+      font-size: 50px;
+      letter-spacing: -3px;
+    }
+  }
+  $img-map : (
+   1: 'award_2019_pc.png',
+   2: 'award_2021_pc.png',
+   3: 'award_2020_pc.png'
+  );
+  ul {
+    // @for $i from 1 through length($img-map) {
+    //   li:nth-child($i) {
+    //     background: url($route + map-get($img-map, $i)) no-repeat center;
+    //     background-size: contain;
+    //   }
+    // }
+    text-align: center;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      &:nth-child(1) {
+        background: url($route + '/award_2019_pc.png') no-repeat center;
+        background-size: contain;
+        width: 201px;
+        height: 70px;
+      }
+      &:nth-child(2) {
+        background: url($route + '/award_2021_pc.png') no-repeat center;
+        background-size: contain;
+        width: 250px;
+        height: 146px;
+      }
+      &:nth-child(3) {
+        background: url($route + '/award_2020_pc.png') no-repeat center;
+        background-size: contain;
+        width: 201px;
+        height: 70px;
+      }
+    }
+  }
+}

@@ -1,0 +1,207 @@
+
+@import '../../../assets/style/functions.scss';
+$blue: #0F5EDD;
+$deep-blue: #022362;
+$pink: #ff4a8b;
+$url: 'http://res.tutoring.co.kr/res/images/evt/202106/challenge2/';
+@mixin btnViewCertificate {
+	position: relative;
+	display: block;
+	width: 100%; height: 45px;
+	margin-right: auto;
+	margin-left: auto;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	background-color: #333;
+	border-radius: 8px;
+
+	&:after {
+		content: "";
+		position: absolute; top: 50%; right: 20px;
+		width: 8px; height: 8px;
+		margin: -1px 0 1px 13px;
+		border-top: 2px solid #fff;
+		border-right: 2px solid #fff;
+		vertical-align: middle;
+		box-sizing: border-box;
+		transform: rotate(45deg) translateY(-50%);
+	}
+}
+.focus-certificate {
+  background: #f1f1f1;
+  @include media-tamo() {
+    background: #eee;
+  }
+}
+.promotion-certificate {
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 70px;
+	text-align: center;
+	color: #999;
+	font-size: 12px;
+	line-height: 19px;
+	letter-spacing: -1px;
+
+	@media (min-width: 1200px) {
+		width: 996px;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 17px;
+	}
+
+	.heading {
+		margin-bottom: 10px;
+		color: #333;
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 38px;
+		letter-spacing: -2px;
+	}
+	.certificate__image {
+		display: block;
+		margin: 15px auto 20px;
+	}
+	.certificate__tip {
+		margin: 30px auto 10px;
+		padding: 16px;
+		color: #666;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 21px;
+		letter-spacing: -0.5px;
+		background-color: #e6e6e6;
+		border-radius: 10px;
+		box-sizing: border-box;
+	}
+
+	.button {
+		@include btnViewCertificate;
+	}
+}
+
+.promotion-notice {
+	background-color: #eee;
+
+	.heading {
+		background-color: #ddd;
+
+		&__button {
+			position: relative;
+			display: flex;
+      max-width: 668px;
+			width: 100%; 
+			height: 50px;
+			margin: 0 auto;
+			padding: 0 30px;
+			align-items: center;
+			justify-content: space-between;
+			color: #000;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: -1px;
+			box-sizing: border-box;
+			cursor: default;
+
+			@media (min-width: 1200px) {
+				width: 996px;
+				max-width: 996px;
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+	}
+	.inner {
+		display: block;
+		max-width: 668px;
+		margin: 0 auto;
+		padding: 30px;
+		box-sizing: border-box;
+
+		@media (min-width: 1200px) {
+			width: 996px;
+			max-width: 996px;
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+  
+	.notice__title {
+		margin-bottom: 10px;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 20px;
+		letter-spacing: -1px;
+	}
+	.notice__list .list__item {
+		position: relative;
+		color: #666;
+		font-size: 10px;
+		line-height: 17px;
+		letter-spacing: -0.5px;
+		text-indent: 7px;
+
+		&:before {
+			content: "\B7";
+			position: absolute; top: 0; left: -7px;
+			color: #666;
+		}
+	}
+	.notice__list ~ .notice__title {margin-top: 24px;}
+  .notice__item {
+    @include media-mo() {
+      padding-bottom: 100px;
+    }
+  }
+}
+
+.promotion-guide {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  color: #666;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+
+  @media (min-width: 1200px) {
+    width: 996px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .heading {
+    margin-bottom: 16px;
+    color: #f15d5d;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 16px; height: 16px;
+      margin: -1px 4px 1px 0;
+      background-image: url("//res.tutoring.co.kr/res/images/common/ico_comm.png");
+      background-repeat: no-repeat;
+      background-position: -140px -104px;
+      background-size: 220px 188px;
+      vertical-align: middle;
+    }
+  }
+
+  .guide__list .list__item {
+    position: relative;
+    padding-left: 7px;
+
+    &:before {
+      content: "\B7";
+      position: absolute; top: 0; left: 0;
+      color: #666;
+    }
+  }
+  .guide__list ~ .heading {margin-top: 28px;}
+}

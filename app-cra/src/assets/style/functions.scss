@@ -1,11 +1,41 @@
 @import '../fonts/index.scss';
 
-$mobile: '767px';
-$tablet: '1199px';
-$pc: '1200px';
+* {
+  font-family: 'ns';
+}
+$mobile: '767';
+$tablet: '1199';
+$pc: '1200';
 
-@mixin font($type){
-  @if($type == 'ns') {
-    font-family: 'NotoSansKR-Black';
+$color: red;
+
+// 폰트 정의 보류
+// @mixin font($type){
+//   @if($type == 'ns') {
+//     font-family: 'NotoSansKR-Black';
+//   }
+// }
+
+@mixin media-mo($mode:'default') {
+  @media (max-width: $mobile+'px') {
+    @content;
+  }
+}
+
+@mixin media-ta($mode:'default') {
+  @media (min-width: $mobile + 1 +'px') and (max-width: $tablet+'px') {
+    @content;
+  }
+}
+
+@mixin media-tamo($mode: 'default') {
+  @media (max-width: $tablet+'px') {
+    @content;
+  }
+}
+
+@mixin media-pc($mode:'default') {
+  @media (min-width: $pc+'px') {
+    @content;
   }
 }

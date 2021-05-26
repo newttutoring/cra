@@ -1,0 +1,8 @@
+@import '../../../assets/style/functions.scss';
+$route: 'https://res.tutoring.co.kr/res/images/evt/202105/oh';
+
+.explan {
+  height: 2768px;
+  // background: #5D05D7 url($route + '/oh_365_pc01_img.jpg') no-repeat center;
+  background-size: 1600px 2768px;
+}
