@@ -1,0 +1,19 @@
+
+@import '../../../assets/style/functions.scss';
+$route: 'https://res.tutoring.co.kr/res/images/evt/202106/bird/';
+
+.early-bird {
+    background:#001F6E;
+    color: white;
+  p {
+    font-size: 34px;
+    @include font('ns');
+  }
+  .img {
+    display: block;
+    width: 996px;
+    height: 507px;
+    background: url($route + "/bird_boon_pc_img.png") no-repeat center;
+    background-size: 996px 507px;
+  }
+}

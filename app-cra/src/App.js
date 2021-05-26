@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './assets/style/functions.scss';
+import './index.css';
+import EarlyBird from './components/Section/EarlyBird/EarlyBird';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >cvcxvx
-          Learn Reactadsfsdafsdfcvcxvcxv
-        </a>
-      </header>
+      {/* kv A 타입 */}
+      {/* kv B 타입 */}
+      {/* 65% 이미지 */}
+      <EarlyBird/>
+      {/* 숫자 카운트 */}
+      {/* 보라색 3가지 배경 */}
+      {/* 보라색 핸드폰 */}
+      {/* 카드 들 */}
+      {/* 검은 배경  */}
+      {/* 후기 */}
+      {/* 안내문구 */}
     </div>
   );
 }
