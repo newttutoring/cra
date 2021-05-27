@@ -1,2 +1,238 @@
 @import '../../../assets/style/functions.scss';
 
+.btype {
+  background: #f6f6f6;
+  padding: 100px 0;
+  .title {
+    margin-bottom: -30px;
+    font-size: 34px;
+    letter-spacing: -1px;
+    line-height: 40px;
+    font-weight: 900;
+    color: #001f6e;
+    text-align: center;
+    // @include font(roboto);
+  }
+  .title-wrap {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .imgwrap, p {
+    text-align: left;
+    @include media-pc {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .imgwrap {
+    width: 227px;
+    height: 55px;
+  }
+  .desc {
+    font-size: 14px;
+    color: #999;
+    letter-spacing: -1px;
+    line-height: 21px;
+    @include media-pc {
+      margin-left: 30px;
+    }
+  }
+}
+
+$eventHappyImageUrl: '//res.tutoring.co.kr/res/images/evt/202105/oh/';
+
+.plan-wrap {
+  margin: 20px auto 0 auto;
+  @include media-pc {
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.plan {
+	position: relative;
+	height: 170px;
+	width: 320px;
+	border-radius: 15px;
+	background: #FFFFFF;
+	margin: 0 10px 0 10px;
+	margin-top: 22px;
+	box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+	border: 1px solid #D4D4D4;
+	.discount_rate {
+		position: absolute;
+		right: 20px;
+		top: -3px;
+		width: 56px;
+		height: 34px;
+		background: #F15D5D;
+		border-radius: 3px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 18px;
+		color: #FFFFFF;
+		padding-top: 2px;
+		&:before {
+			border-top: 10px solid #F15D5D;
+			border-left: 28px solid transparent;
+			border-right: 28px solid transparent;
+			content: "";
+			position: absolute;
+			width: 0px;
+			top: 36px;
+			border-radius: 3px;
+		}
+		.unit {
+			font-size: 15px;
+			padding-top: 4px;
+		}
+	}
+	.container {
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+		.title {
+			height: 20px;
+			display: flex;
+			align-items: center;
+			letter-spacing: -0.394737px;
+			font-weight: bold;
+			font-size: 10px;
+			line-height: 10px;
+			letter-spacing: -0.394737px;
+			margin-bottom: 12px;
+			span {
+        font-weight: 600;
+				color: #5D04D9;
+				border: 1px solid #5D04D9;
+				border-radius: 16px;
+				padding: 5px 9px;
+				margin-right: 4px;
+			}
+		}
+		.period {
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 20px;
+			color: #333333;
+			margin-bottom: 7px;
+		}
+		.details {
+			display: flex;
+			align-items: center;
+			color: #333333;
+			font-size: 12px;
+			line-height: 14px;
+			height: 10px;
+			&__type {
+				padding-right: 7px;
+				border-right: 1px solid #DDDDDD;
+				height: 10px;
+				display: flex;
+				align-items: center;
+			}
+			&__time {
+				padding-left: 7px;
+				padding-right: 7px;
+				border-right: 1px solid #DDDDDD;
+				height: 10px;
+				display: flex;
+				align-items: center;
+			}
+			&__quantity {
+				padding-left: 7px;
+				height: 10px;
+				display: flex;
+				align-items: center;
+			}
+		}
+		.prices_wrap {
+			margin-top: 34px;
+			.prices {
+				display: flex;
+				justify-content: flex-end;
+				margin-top: 4px;
+				font-size: 18px;
+				line-height: 1em;
+				letter-spacing: -1px;
+        @include font(roboto);
+        &__price {
+          font-weight: 700;
+        }
+			}
+			.prices__per {
+				margin-left: 2px;
+				letter-spacing: -2px;
+        font-weight: 700;
+			}
+		}
+		.original_price {
+			font-size: 12px;
+			line-height: 18px;
+			text-align: right;
+			letter-spacing: -0.617697px;
+			color: #B6B6B6;
+			text-decoration: line-through;
+		}
+	}
+	.purchase-button{
+		width: 280px;
+		height: 35px;
+		border-radius: 10px;
+		background-color: #000000;
+		display: flex;
+		margin: 0 auto;
+		.text{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin: 0 auto;
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 14px;
+			color: #fff;
+			&:after {
+				content: "";
+				width: 7px; height: 7px;
+				margin-left: 8px;
+				border-top: 2px solid #fff;
+				border-left: 2px solid #fff;
+				transform: rotate(135deg);
+				margin-top: 2px;
+			}	
+		}
+	}
+}
+
+.coupon {
+	overflow: hidden;
+	position: relative;
+	width: 320px;
+	height: 122px;
+	margin-right: auto;
+	margin-left: auto;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	border-radius: 15px;
+	background-size: 100%;
+	color: transparent;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 15px;
+		left: 15px;
+		border-top: 1px dashed #b6b6b6;
+		opacity: 0.5;
+	}
+	&--allpass1 {background-image: url($eventHappyImageUrl + 'oh_coupon01_mo_img.png');}
+	&--allpass2 {background-image: url($eventHappyImageUrl + 'oh_coupon02_mo_img.png');}
+	&--play1 {background-image: url($eventHappyImageUrl + 'oh_coupon03_mo_img.png');}
+	&--play2 {background-image: url($eventHappyImageUrl + 'oh_coupon04_mo_img.png');}
+}

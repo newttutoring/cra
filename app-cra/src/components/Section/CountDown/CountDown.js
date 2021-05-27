@@ -9,19 +9,19 @@ const CountDown = () => {
     <section className={cx('count-down')}>
       <div className={cx('title-img')}></div>
       <div className={cx('day')}>
-        <div className={cx('d-img')}></div>
-        <span className={cx('')}>1</span>
-        <span className={cx('')}>4</span>
+        <span className={cx('d-img')}></span>
+        <span className={cx('count-down__number')}>1</span>
+        <span className={cx('count-down__number')}>4</span>
       </div>
       <div className={cx('timer')}>
-        <span className={cx('')}>2</span>
-        <span className={cx('')}>3</span>
-        :
-        <span className={cx('')}>5</span>
-        <span className={cx('')}>9</span>
-        :
-        <span className={cx('')}>5</span>
-        <span className={cx('')}>9</span>
+        <span className={cx('count-down__number')}>2</span>
+        <span className={cx('count-down__number')}>3</span>
+        <span className={cx('dot')}></span>
+        <span className={cx('count-down__number')}>5</span>
+        <span className={cx('count-down__number')}>9</span>
+        <span className={cx('dot')}></span>
+        <span className={cx('count-down__number')}>5</span>
+        <span className={cx('count-down__number')}>9</span>
       </div>
     </section>
   )

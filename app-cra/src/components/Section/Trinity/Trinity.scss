@@ -1,0 +1,119 @@
+@import '../../../assets/style/functions.scss';
+$eventHappyImageUrl: '//res.tutoring.co.kr/res/images/evt/202105/oh/';
+
+.happy-allpass {
+  padding: 100px 0;
+	text-align: center;
+	background-color: #fff;
+
+	&__title {
+		margin-bottom: 30px;
+		color: #333;
+		font-size: 50px;
+		font-weight: 900;
+		line-height: 65px;
+		letter-spacing: -2px;
+	}
+
+	&__desc {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: -30px;
+		margin-bottom: 48px;
+		color: #5d04d9;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1.4em;
+		letter-spacing: -1px;
+
+		.plus {
+			display: flex;
+			width: 34px;
+			height: 34px;
+			margin-right: 8px;
+			margin-left: 8px;
+			font-size: 0;
+			color: transparent;
+			background: url($eventHappyImageUrl + 'oh_365plus_ico.png') no-repeat 0 0;
+			background-size: 100%;
+		}
+	}
+
+	&__first {
+		height: 2388px;
+		color: transparent;
+		background: #5D04D9  url($eventHappyImageUrl + 'oh_365_mo01_img.jpg') no-repeat 50% 0;
+		background-size: auto 100%;
+	}
+	&__second {
+		height: 1941px;
+		color: transparent;
+		background: #F0F0F0  url($eventHappyImageUrl + 'oh_365_mo02-1_img.jpg') no-repeat 50% 0;
+		background-size: auto 100%;
+	}
+	&__visual {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 450px;
+		color: #fff;
+		background: url($eventHappyImageUrl + 'oh_365_hand_img.jpg') no-repeat 50% 50%;
+		background-size: auto 100%;
+	
+		&__desc {
+			font-size: 25px;
+			font-weight: 70;
+			line-height: 30px;
+			letter-spacing: -1px;
+			text-align: center;
+
+		}
+	}
+}
+
+.diagram {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 470px;
+	margin: 0 auto 111px;
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 240px;
+		height: 240px;
+		margin: -18px;
+		background-color: #979797;
+		border-radius: 50%;
+		color: #fff;
+		font-size: 18px;
+		line-height: 25px;
+		letter-spacing: -1px;
+		mix-blend-mode: multiply;
+
+		&:first-child {
+			margin: 0 20px -40px;
+		}
+		&--speaking {
+			background-color: #64FAF1;
+			color: #000;
+		}
+		&--writing {
+			background-color: #5D04D9;
+		}
+	}
+	&__point {
+		display: block;
+    margin: 10px 0 17px 0;
+		font-size: 30px;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+    @include font(roboto);
+    font-weight: 700;
+	}
+}

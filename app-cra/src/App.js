@@ -4,7 +4,7 @@ import CountDown from './components/Section/CountDown/CountDown';
 import Notice from './components/Section/Notice/Notice';
 import Explan from './components/Section/Explan/Explan';
 import Trinity from './components/Section/Trinity/Trinity';
-import '../src/assets/style/functions.scss';
+// import '../src/assets/style/functions.scss';
 import Cards from './components/Section/Cards/Cards';
 import Pride from './components/Section/Pride/Pride';
 import Review from './components/Section/Review/Review';
@@ -28,8 +28,6 @@ function App() {
 
       {/* 언택트 시대 튜터링으로 영어 해결! */}
       <Trinity/>
-
-      {/* 보라색 3가지 배경 */}
 
       {/* 보라색 핸드폰 */}
       <Explan/>

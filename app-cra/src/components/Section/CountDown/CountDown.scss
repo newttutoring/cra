@@ -1,3 +1,79 @@
-@import '../../../assets/style/functions.scss';
-$route: 'https://res.tutoring.co.kr/res/images/evt/202106/bird/';
+@import "../../../assets/style/functions.scss";
+$route: "https://res.tutoring.co.kr/res/images/evt/202106/bird/";
 
+.count-down {
+  background: #f6f6f6;
+  padding: 100px 0;
+  text-align: center;
+  .day {
+    margin-top: 81px;
+    .count-down__number {
+      width: 105px;
+      height: 123px;
+      font-size: 122px;
+      line-height: 113px;
+      margin: 0 5px;
+    }
+  }
+  .d-img, .count-down__number {
+    vertical-align: middle;
+  }
+  .d-img {
+    display: inline-block;
+    margin-right: 14px;
+    width: 176px;
+    height: 123px;
+    background: url($route + "bird_d_pc_img.png") no-repeat center;
+    background-size: contain;
+  }
+  &__number {
+    display: inline-block;
+    margin: 0 1px;
+    width: 62px;
+    height: 87px;
+    border-radius: 10px;
+    background: #150e40;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    @include font(roboto);
+    font-size: 50px;
+    line-height: 84px;
+  }
+  .timer {
+    margin-top: 42px;
+    color: #001f6e;
+    font-size: 50px;
+    @include font(roboto);
+    .dot {
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      &:before, &:after {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 7px;
+        height: 7px;
+        background: #001f6e;
+        border-radius: 50%;
+        content:'';
+      }
+      &:before {
+        top: -20px;
+      }
+      &:after {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.title-img {
+  margin: 0 auto;
+  width: 507px;
+  height: 50px;
+  background: url($route + "bird_dday_pc_img.png") no-repeat center;
+  background-size: contain;
+}

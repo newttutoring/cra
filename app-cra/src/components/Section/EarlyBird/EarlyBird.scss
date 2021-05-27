@@ -3,14 +3,20 @@
 $route: 'https://res.tutoring.co.kr/res/images/evt/202106/bird/';
 
 .early-bird {
+    padding: 100px 0;
     background:#001F6E;
     color: white;
   p {
     font-size: 34px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: -1px;
   }
   .img {
     display: block;
     margin: 0 auto;
+    margin-top: 127px;
     width: 996px;
     height: 507px;
     background: url($route + "/bird_boon_pc_img.png") no-repeat center;

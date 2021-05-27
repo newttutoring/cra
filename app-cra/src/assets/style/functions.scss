@@ -1,20 +1,22 @@
-@import '../fonts/index.scss';
+// @import '../fonts/index.scss';
 
-* {
-  font-family: 'ns';
-}
 $mobile: '767';
 $tablet: '1199';
 $pc: '1200';
 
 $color: red;
 
+
+
 // 폰트 정의 보류
-// @mixin font($type){
-//   @if($type == 'ns') {
-//     font-family: 'NotoSansKR-Black';
-//   }
-// }
+@mixin font($type){
+  @if($type == 'ns') {
+    font-family: 'NotoSansKR-Black';
+  }
+  @if($type == 'roboto') {
+    font-family: 'Roboto-Medium';
+  }
+}
 
 @mixin media-mo($mode:'default') {
   @media (max-width: $mobile+'px') {
