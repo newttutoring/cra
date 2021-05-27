@@ -1,0 +1,147 @@
+@import "../../assets/style/functions.scss";
+$url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
+
+@mixin type($type : 'basic') {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+
+  .wrapper {
+    position: relative;
+    display: table;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 13px 0;
+    text-align: center;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+
+    .textwrap, .btnwrap {
+      display: table-cell;
+    }
+    .textwrap {
+      text-align: left;
+    }
+    .btnwrap {
+      @if ( $type == 'is-simple') {
+        width: 67.2%;
+      }
+    }
+    .price {
+      display: none;
+      @if( $type == 'is-info') {
+        display: block;
+      }
+    }
+  }
+
+  .heading {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+
+  .cta__count {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    .number {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: 26px;
+      height: 32px;
+      line-height: 32px;
+      margin-right: 4px;
+      border: 1px solid #848484;
+      color: #333;
+      font-size: 20px;
+      box-sizing: border-box;
+      color: white;
+      background: linear-gradient(180deg, rgba(94, 94, 94, 0) 0%, #5E5E5E 29.69%);
+    }
+    .unit {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .cta__button {
+    display: flex;
+    width: 100%;
+    height: 38px;
+    background: #0f5edd;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    align-items: center;
+    justify-content: center;
+    @if( $type == 'is-simple') {
+      display: block;
+      background: #5D04D9;
+    }
+    &:after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      margin-left: 8px;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      transform: rotate(135deg);
+      @if( $type == 'is-simple') {
+        content: none;
+      }
+    }
+  }
+
+  .cta__badge {
+    position: absolute;
+    top: -60px;
+    left: -35px;
+    width: 110px;
+    height: 110px;
+    color: transparent;
+    background-size: 100%;
+    background: url($url + "/challenge2_cta_badge.png") no-repeat 50% 0;
+    background-size: 100%;
+    display: none;
+    @if( $type == 'basic') {
+      display: block;
+    }
+    @media (min-width: 768px) {
+      top: -80px;
+      left: -100px;
+      width: 145px;
+      height: 145px;
+    }
+  }
+}
+
+
+.challenge-cta {
+  @include type();
+
+  &.is-simple {
+    @include type('is-simple');
+  }
+
+  &.is-info {
+    @include type('is-info');
+  }
+}

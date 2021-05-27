@@ -9,6 +9,7 @@ import Cards from './components/Section/Cards/Cards';
 import Pride from './components/Section/Pride/Pride';
 import Review from './components/Section/Review/Review';
 import Btype from './components/Section/Btype/Btype';
+import Cta from './components/cta/cta';
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
 
       {/* 안내문구 */}
       <Notice/>
+
+      {/* cta */}
+      <Cta/>
     </div>
   );
 }
