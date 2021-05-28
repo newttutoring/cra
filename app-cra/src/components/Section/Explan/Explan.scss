@@ -3,6 +3,16 @@ $route: 'https://res.tutoring.co.kr/res/images/evt/202105/oh';
 
 .explan {
   height: 2768px;
-  // background: #5D05D7 url($route + '/oh_365_pc01_img.jpg') no-repeat center;
-  background-size: 1600px 2768px;
+  background: #5D05D7 url($route + '/oh_365_pc01_img.jpg') no-repeat center;
+  background-size: contain;
+  @include media-ta() {
+    height: 1604px;
+    background: #5D05D7 url($route + '/oh_365_pad01_img.jpg') no-repeat center;
+    background-size: contain;
+  }
+  @include media-mo() {
+    height: 2388px;
+    background: #5D05D7 url($route + '/oh_365_mo01_img.jpg') no-repeat center;
+    background-size: contain;
+  }
 }

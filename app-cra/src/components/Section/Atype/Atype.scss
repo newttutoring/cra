@@ -1,0 +1,8 @@
+@import '../../../assets/style/functions.scss';
+
+.atype {
+  display: inline-block;
+  @include media-tamo {
+    display: block;
+  }
+}

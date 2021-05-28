@@ -1,52 +1,95 @@
-// @import '../../../assets/style/functions.scss';
+@import '../../../assets/style/functions.scss';
 $route: 'https://res.tutoring.co.kr/res/images/evt/com';
 
 .Pride {
-  padding: 100px 0;
+  padding: 100px 0 76px 0;
   background: #000;
   .title {
     color: #cf9f50;
-    font-size: 16px;
+    font-size: 17px;
     text-align: center;
+    @include font(roboto);
+    letter-spacing: -2.3px;
+    @include media-tamo {
+      margin-top: 50px;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: -0.5px;
+      color: rgba(#c79d54, 0.5);
+    }
     strong {
       display: block;
+      margin-bottom: 18px;
+      letter-spacing: -6px;
+      font-weight: 700;
       font-size: 50px;
-      letter-spacing: -3px;
+      @include font(roboto);
+      @include media-tamo {
+        font-size: 37px;
+        color: rgba(#c79d54, 1);
+      }
     }
   }
-  $img-map : (
-   1: 'award_2019_pc.png',
-   2: 'award_2021_pc.png',
-   3: 'award_2020_pc.png'
-  );
+  .img {
+    display: none;
+    @include media-tamo {
+      display: block;
+      margin: -20px auto 0 auto;
+      width: 111px;
+      height: 195px;
+      background: url($route + '/award_2021_img.png') no-repeat center;
+      background-size: contain;
+    }
+  }
   ul {
-    // @for $i from 1 through length($img-map) {
-    //   li:nth-child($i) {
-    //     background: url($route + map-get($img-map, $i)) no-repeat center;
-    //     background-size: contain;
-    //   }
-    // }
+    margin-top: 35px;
     text-align: center;
     li {
       display: inline-block;
       vertical-align: middle;
+      @include media-tamo {
+        display: block;
+        margin: 0 auto;
+      }
       &:nth-child(1) {
         background: url($route + '/award_2019_pc.png') no-repeat center;
         background-size: contain;
-        width: 201px;
-        height: 70px;
+        width: 286px;
+        height: 97px;
+        @include media-tamo {
+          margin-top: 54px;
+          width: 160px;
+          height: 44.5px;
+          background: url($route + '/award_2021_mo.png') no-repeat center;
+          background-size: contain;
+        }
       }
       &:nth-child(2) {
+        margin: 0 34px;
         background: url($route + '/award_2021_pc.png') no-repeat center;
         background-size: contain;
-        width: 250px;
-        height: 146px;
+        width: 359px;
+        height: 213px;
+        @include media-tamo {
+          margin: 29px auto 0 auto;
+          width: 160px;
+          height: 45px;
+          background: url($route + '/award_2020_mo.png') no-repeat center;
+          background-size: contain;
+        }
       }
       &:nth-child(3) {
         background: url($route + '/award_2020_pc.png') no-repeat center;
         background-size: contain;
-        width: 201px;
-        height: 70px;
+        width: 286px;
+        height: 97px;
+        @include media-tamo {
+          margin: 27px auto 0 auto;
+          width: 160px;
+          height: 46.3px;
+          background: url($route + '/award_2019_mo.png') no-repeat center;
+          background-size: contain;
+        }
       }
     }
   }

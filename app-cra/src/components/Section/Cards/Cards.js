@@ -6,8 +6,9 @@ const cx = classNames.bind(style)
 
 const Cards = () => {
   return (
-    <div className={cx('')}>
-      <img src="https://res.tutoring.co.kr/res/images/evt/202105/oh/oh_365_pc02-1_img.jpg" alt="" />
+    <div className={cx('cards')}>
+      <div className="img">
+      </div>
     </div>
   )
 }

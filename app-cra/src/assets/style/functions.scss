@@ -1,12 +1,8 @@
 // @import '../fonts/index.scss';
 
-$mobile: '767';
-$tablet: '1199';
-$pc: '1200';
-
-$color: red;
-
-
+$mobile: 767;
+$tablet: 1199;
+$pc: 1200;
 
 // 폰트 정의 보류
 @mixin font($type){
@@ -25,7 +21,7 @@ $color: red;
 }
 
 @mixin media-ta($mode:'default') {
-  @media (min-width: $mobile + 1 +'px') and (max-width: $tablet+'px') {
+  @media (min-width: $mobile + 1  +'px') and (max-width: $tablet + 'px') {
     @content;
   }
 }
@@ -39,5 +35,24 @@ $color: red;
 @mixin media-pc($mode:'default') {
   @media (min-width: $pc+'px') {
     @content;
+  }
+}
+
+.pc-layer {
+  display: block;
+  @include media-tamo() {
+    display: none;
+  }
+}
+.tamo-layer {
+  display: none;
+  @include media-tamo() {
+    display: block;
+  }
+}
+.m-layer {
+  display: none;
+  @include media-mo() {
+    display: none;
   }
 }

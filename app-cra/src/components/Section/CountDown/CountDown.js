@@ -6,12 +6,17 @@ const cx = classNames.bind(style)
 
 const CountDown = () => {
   return (
+    // 오늘 마감일경우 is-date-end 클래스 추가
     <section className={cx('count-down')}>
       <div className={cx('title-img')}></div>
       <div className={cx('day')}>
         <span className={cx('d-img')}></span>
-        <span className={cx('count-down__number')}>1</span>
-        <span className={cx('count-down__number')}>4</span>
+        <span className={cx('count-down__number')}>
+          <span>1</span>
+        </span>
+        <span className={cx('count-down__number')}>
+          <span>4</span>
+        </span>
       </div>
       <div className={cx('timer')}>
         <span className={cx('count-down__number')}>2</span>

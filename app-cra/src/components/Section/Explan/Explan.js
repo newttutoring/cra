@@ -7,7 +7,10 @@ const cx = classNames.bind(style)
 const Explan = () => {
   return (
     <section className={cx('explan')}>
-      <img src="https://res.tutoring.co.kr/res/images/evt/202105/oh/oh_365_pc01_img.jpg" alt="" />
+      <div className={cx('img')}></div>
+      {/*
+        <img src="https://res.tutoring.co.kr/res/images/evt/202105/oh/oh_365_pc01_img.jpg" alt="" />
+       */}
     </section>
   )
 }

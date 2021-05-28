@@ -1,27 +1,28 @@
 @import '../../../assets/style/functions.scss';
 
 .ontact-review {
-	padding-top: 70px;
+	padding-top: 80px;
 	padding-bottom: 70px;
 	font-size: 0;
 	text-align: center;
-
+  background: #f1f1f1;
 	@media (min-width: 1200px) {
 		padding-top: 100px;
 		padding-bottom: 100px;
-	} 
+	}
 
 	.heading {
 		margin-bottom: 34px;
-        font-size: 25px;
-        font-weight: 600;
-        line-height: 32px;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 32px;
 		letter-spacing: -2px;
 
 		@media (min-width: 1200px) {
 			margin-bottom: 80px;
+      font-size: 40px;
+      line-height: 44px;
 		}
-		
 		&:after {
 			content: "";
 			display: block;
@@ -29,9 +30,11 @@
 			margin: 20px auto 0;
 			background: url("//res.tutoring.co.kr/res/images/evt/202012/pesta/pesta_star_img.png") no-repeat 50% 0;
 			background-size: 100% auto;
+      @include media-pc {
+        margin-top: 32px;
+      }
 		}
 	}
-	
 	.review__item {
 		width: 320px;
     max-height: 183px;

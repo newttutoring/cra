@@ -1,0 +1,25 @@
+@import '../../../assets/style/functions.scss';
+$url: 'https://res.tutoring.co.kr/res/images/evt/202105/oh/';
+  
+.purple-mobile {
+  p {
+    color: white;
+    font-size: 50px;
+    line-height: 65px;
+    font-weight: 700;
+    @include media-tamo {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 620px;
+    background: url($url + 'oh_365_hand_img.jpg') no-repeat center;
+    background-size: cover;
+  }
+}

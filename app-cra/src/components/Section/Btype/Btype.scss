@@ -3,6 +3,9 @@
 .btype {
   background: #f6f6f6;
   padding: 100px 0;
+  @include media-tamo {
+    padding: 72px 0 80px 0;
+  }
   .title {
     margin-bottom: -30px;
     font-size: 34px;
@@ -11,11 +14,17 @@
     font-weight: 900;
     color: #001f6e;
     text-align: center;
-    // @include font(roboto);
+    @include media-tamo {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
   .title-wrap {
     margin-top: 100px;
     text-align: center;
+    @include media-tamo {
+      margin-top: 84px;
+    }
   }
   .imgwrap, p {
     text-align: left;
@@ -27,6 +36,9 @@
   .imgwrap {
     width: 227px;
     height: 55px;
+    @include media-tamo {
+      margin: 0 auto;
+    }
   }
   .desc {
     font-size: 14px;
@@ -36,18 +48,25 @@
     @include media-pc {
       margin-left: 30px;
     }
+    @include media-tamo {
+      margin-top: 20px;
+      text-align: center;
+    }
   }
 }
 
 $eventHappyImageUrl: '//res.tutoring.co.kr/res/images/evt/202105/oh/';
 
 .plan-wrap {
-  margin: 20px auto 0 auto;
   @include media-pc {
+    margin: 20px auto 0 auto;
     max-width: 700px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  @include media-tamo {
+    margin: 33px auto 0 auto;
   }
 }
 .plan {
@@ -60,6 +79,9 @@ $eventHappyImageUrl: '//res.tutoring.co.kr/res/images/evt/202105/oh/';
 	margin-top: 22px;
 	box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
 	border: 1px solid #D4D4D4;
+  @include media-tamo {
+    margin: 24px auto 0 auto;
+  }
 	.discount_rate {
 		position: absolute;
 		right: 20px;

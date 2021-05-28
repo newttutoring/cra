@@ -5,15 +5,64 @@ $route: "https://res.tutoring.co.kr/res/images/evt/202106/bird/";
   background: #f6f6f6;
   padding: 100px 0;
   text-align: center;
+  @include media-tamo {
+    padding: 89px 0;
+  }
+  &.is-date-end {
+    // TODO: 기간 오늘일때 
+    .day, .timer {
+      display: none;
+    }
+    .title-img {
+      margin: 0 auto;
+      width: 259px;
+      height: 259px;
+      background: url($route + "bird_end_mo_img.png") no-repeat center;
+      background-size: contain;
+    }
+  }
   .day {
     margin-top: 81px;
+    @include media-tamo {
+      margin-top: 45px;
+    }
     .count-down__number {
+      position: relative;
       width: 105px;
       height: 123px;
       font-size: 122px;
       line-height: 113px;
       margin: 0 5px;
+      @include media-tamo {
+        width: 60px;
+        height: 70px;
+        font-size: 70px;
+        line-height: 66px;
+        border-radius: 5px;
+      }
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        background: #3D3763;
+        height: 5px;
+        content:'';
+        @include media-tamo {
+          height: 3px;
+        }
+      }
+      span {
+        position: relative;
+        z-index: 1;
+        font-weight:inherit;
+      }
     }
+  }
+  .date-end {
+    display: none;
   }
   .d-img, .count-down__number {
     vertical-align: middle;
@@ -25,6 +74,12 @@ $route: "https://res.tutoring.co.kr/res/images/evt/202106/bird/";
     height: 123px;
     background: url($route + "bird_d_pc_img.png") no-repeat center;
     background-size: contain;
+    @include media-tamo {
+      width: 99px;
+      height: 70px;
+      background: url($route + "bird_d_img.png") no-repeat center;
+      background-size: contain;
+    }
   }
   &__number {
     display: inline-block;
@@ -35,16 +90,26 @@ $route: "https://res.tutoring.co.kr/res/images/evt/202106/bird/";
     background: #150e40;
     color: white;
     text-align: center;
-    font-weight: 900;
+    font-weight: 700;
     @include font(roboto);
     font-size: 50px;
     line-height: 84px;
+    @include media-tamo {
+      width: 35px;
+      height: 50px;
+      border-radius: 5px;
+      font-size: 40px;
+      line-height: 46px;
+    }
   }
   .timer {
     margin-top: 42px;
     color: #001f6e;
     font-size: 50px;
     @include font(roboto);
+    @include media-tamo {
+      margin-top: 21px;
+    }
     .dot {
       position: relative;
       display: inline-block;
@@ -71,9 +136,15 @@ $route: "https://res.tutoring.co.kr/res/images/evt/202106/bird/";
 }
 
 .title-img {
-  margin: 0 auto;
+  margin: 0 auto; 
   width: 507px;
   height: 50px;
   background: url($route + "bird_dday_pc_img.png") no-repeat center;
   background-size: contain;
+  @include media-tamo {
+    width: 256px;
+    height: 82px;
+     background: url($route + "bird_dday_mo_img.png") no-repeat center;
+    background-size: contain;
+  }
 }

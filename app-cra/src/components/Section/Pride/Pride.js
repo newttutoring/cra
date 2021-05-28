@@ -6,10 +6,11 @@ const cx = classNames.bind(style)
 
 const Pride = () => {
   return (
-    <div className={cx('Pride')}> 
+    <div className={cx('Pride')}>
+      <div className="img"></div>
       <p className={cx('title')}>
         <strong>3년 연속 1위</strong>
-        소비자가 직접 뽑은 1:1 영어회화 부문
+        소비자가 직접 뽑은 <br className={cx('tamo-layer')}/>1:1 영어회화 부문
       </p>
       <ul>
         <li></li>
