@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/assets/style/index.scss';
 import App from './App';
+import Apage from './components/page/Apage';
+import Atype from './components/Section/Atype/Atype';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-  <App />
   {/*
+    <App />
      */}
+  <Apage/>
   </React.StrictMode>,
   document.getElementById('root')
 );
