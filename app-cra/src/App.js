@@ -55,8 +55,9 @@ function App() {
       {/* 안내문구 */}
       <Notice/>
 
-      {/* cta */}
-      <Cta/>
+      {/* cta 
+        <Cta/>
+      */}
     </div>
   );
 }

@@ -6,10 +6,49 @@ const cx = classNames.bind(style);
 
 const Apage = () => {
   return (
-    <div className="Apage">
-      슬라이드
-      <div classNames={cx('atype')}>a타입</div>
+    <div className="">
+      <div className="Apage">
+        <div className="slide">
+          슬라이드
+        </div>
+        <div className={cx('atype')}>
+        <div className="textarea">
+          <div className="textarea__title">
+            <div className="title">2021년 하반기 영어 미리 준비! <br />15일간의 얼리버드</div>
+            <div className="date">2021. 06 .07 - 2021. 06. 21</div>
+          </div>
+          <div className="textarea__option">
+            <div className="title">365올패스 옵션 선택</div>
+            <div className="select">
+              <span className="badge-red">추천</span>Global 12개월 20분 주 2회
+            </div>
+          </div>
+          <div className="textarea__info">
+            <div className="title">옵션 상세</div>
+            <ul>
+              <li><strong>정상가</strong>1,372,000원</li>
+              <li><strong>정상가</strong>1,372,000원 <span className="color-red">65%</span></li>
+              <li><strong>수업 시간</strong>20분 / 주 2회/ 총 98회</li>
+              <li><strong>튜터 타입</strong>GLOBAL <span className="q">?</span></li>
+              <li><strong>추가 혜택</strong>2개월 연장</li>
+            </ul>
+          </div>
+          <div className="textarea__price">
+            <p>할인 적용 가격 <span className="line-through">정가 1,372,000원</span></p>
+            <div className="price">
+              <span className="color-red">65%</span>
+              40,000원/월
+            </div>
+          </div>
+          <div className="btn">바로 구매</div>
+        </div>
 
+        <div className="imgwrap">
+          <p>튜터 타입이 <br />궁금하신가요?</p>
+          <div className="img"></div>
+        </div>
+      </div>
+      </div>
       {/* 65% 2개월 */}
       <section className={cx('early-bird')}>
         <p>남은 반년, <br className={cx('tamo-layer')} />아직 늦지 않았다! <br />하반기 영어 솔루션</p>
@@ -165,21 +204,27 @@ const Apage = () => {
       </section>
 
       {/* 기본은 종료임박 뱃지 있는 타입 
-        is-simple : 뱃지 없고, 검은 배경에 보라색 버튼
-        is-info : 뱃지 없고, 가격/월, 선택옵션이 포함된 레이아웃
-         2106 프로모션에서 모바일에서는 is-simple 클래스를 사용해주세요.  */}
-      <section className={cx("challenge-cta", "is-simple")}>
+        is-simple : 뱃지 없고, 검은 배경에 보라색 버튼 (2106 b타입의 검은색 배경)
+        is-info : 뱃지 없고, 가격/월, 선택옵션이 포함된 레이아웃 (2106 a타입의 하얀색 배경)
+      */}
+      <section className={cx("challenge-cta", "is-info")}>
         <div className={cx('challenge-cta__wrap')}>
           <div className={cx("wrapper")}>
             <span className={cx("cta__badge")}>한정수량</span>
 
             <div className="textwrap">
-              <h2 className={cx("heading")}>잔여수량</h2>
-              <div className={cx("cta__count")}>
-                <span className={cx("number")}>0</span>
-                <span className={cx("number")}>1</span>
-                <span className={cx("number")}>2</span>
-                <span className={cx("unit")}>개</span>
+              <div className="remain">
+                <h2 className={cx("heading")}>잔여수량</h2>
+                <div className={cx("cta__count")}>
+                  <span className={cx("number")}>0</span>
+                  <span className={cx("number")}>1</span>
+                  <span className={cx("number")}>2</span>
+                  <span className={cx("unit")}>개</span>
+                </div>
+              </div>
+              <div className="selected-option">
+                <h2 className={cx("heading")}>선택옵션</h2>
+                <p>365올패스 Global 12+2개월 20분 / 주 2회 <span className="all">총 98회</span></p>
               </div>
             </div>
             <div className="btnwrap">
