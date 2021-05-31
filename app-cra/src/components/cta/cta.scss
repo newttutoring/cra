@@ -1,218 +1,218 @@
-@import "../../assets/style/functions.scss";
-$url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
+// @import "../../assets/style/functions.scss";
+// $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
 
-@mixin type($type : 'basic') {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 50;
-  color: #fff;
-  &__wrap {
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
-    z-index: 1;
-  }
-  .wrapper {
-    position: relative;
-    display: table;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 15px 0;
-    text-align: center;
-    letter-spacing: -0.5px;
-    box-sizing: border-box;
-    @include media-tamo {
-      padding: 20px 50px;
-    }
-    @if ( $type == 'is-simple') {
-      @include media-mo {
-        padding: 10px 30px;
-      }
-    }
-    .textwrap, .btnwrap {
-      display: table-cell;
-      vertical-align: middle;
-    }
-    .textwrap {
-      text-align: left;
-    }
-    .btnwrap {
-      @if ( $type == 'is-simple') {
-        width: 67.2%;
-        @include media-ta {
-          width: 45vw;
-        }
-        @include media-mo {
-          width: 46%;
-        }
-      }
-    }
-    .price {
-      display: none;
-      @if( $type == 'is-info') {
-        display: block;
-      }
-    }
-  }
+// @mixin type($type : 'basic') {
+//   position: fixed;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   z-index: 50;
+//   color: #fff;
+//   &__wrap {
+//     background: rgba(0, 0, 0, 0.9);
+//     backdrop-filter: blur(10px);
+//     z-index: 1;
+//   }
+//   .wrapper {
+//     position: relative;
+//     display: table;
+//     width: 100%;
+//     max-width: 1000px;
+//     margin: 0 auto;
+//     padding: 15px 0;
+//     text-align: center;
+//     letter-spacing: -0.5px;
+//     box-sizing: border-box;
+//     @include media-tamo {
+//       padding: 20px 50px;
+//     }
+//     @if ( $type == 'is-simple') {
+//       @include media-mo {
+//         padding: 10px 30px;
+//       }
+//     }
+//     .textwrap, .btnwrap {
+//       display: table-cell;
+//       vertical-align: middle;
+//     }
+//     .textwrap {
+//       text-align: left;
+//     }
+//     .btnwrap {
+//       @if ( $type == 'is-simple') {
+//         width: 67.2%;
+//         @include media-ta {
+//           width: 45vw;
+//         }
+//         @include media-mo {
+//           width: 46%;
+//         }
+//       }
+//     }
+//     .price {
+//       display: none;
+//       @if( $type == 'is-info') {
+//         display: block;
+//       }
+//     }
+//   }
 
-  .heading {
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-    @if( $type == 'basic') {
-      margin-right: 8px;
-      font-size: 11px;
-      color: #fff;
-    }
-    @if( $type == 'is-simple') {
-      margin-right: 36px;
-      font-size: 16px;
-      color: #999;
-      @include media-ta {
-        font-size: 14px;
-        color: white;
-        letter-spacing: 0px;
-        margin-right: 20px;
-      }
-      @include media-mo {
-        margin-right: 4px;
-        font-size: 11px;
-      }
-    }
-  }
+//   .heading {
+//     display: inline-block;
+//     vertical-align: middle;
+//     font-weight: 600;
+//     letter-spacing: -0.5px;
+//     @if( $type == 'basic') {
+//       margin-right: 8px;
+//       font-size: 11px;
+//       color: #fff;
+//     }
+//     @if( $type == 'is-simple') {
+//       margin-right: 36px;
+//       font-size: 16px;
+//       color: #999;
+//       @include media-ta {
+//         font-size: 14px;
+//         color: white;
+//         letter-spacing: 0px;
+//         margin-right: 20px;
+//       }
+//       @include media-mo {
+//         margin-right: 4px;
+//         font-size: 11px;
+//       }
+//     }
+//   }
 
-  .cta__count {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 600;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+//   .cta__count {
+//     display: inline-block;
+//     font-size: 12px;
+//     font-weight: 600;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
     
-    .number {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 4px;
-      border: 1px solid #848484;
-      box-sizing: border-box;
-      @if($type == 'basic') {
-        width: 26px;
-        height: 32px;
-        font-size: 20px;
-        color: #333;
-        line-height: 32px;
-      }
-      @if($type == 'is-simple') {
-        width: 31px;
-        height: 43px;
-        font-size: 28px;
-        color: white;
-        @include font(roboto);
-        font-weight: 500;
-        line-height: 40px;
-        background: linear-gradient(180deg, rgba(94, 94, 94, 0) 0%, #5E5E5E 29.69%);
-        @include media-tamo {
-          background: white;
-          color: #333;
-          width: 26px;
-          height: 32px;
-          font-size: 20px;
-          line-height: 28px;
-          font-weight: 600;
-        }
-      }
-    }
-    .unit {
-      display: inline-block;
-      vertical-align: middle;
-      @if( $type == 'is-simple') {
-        margin-left: 8px;
-        font-size: 24px;
-        font-weight: 600;
-        @include media-ta {
-          margin-left: 0;
-          font-size: 14px;
-        }
-        @include media-mo {
-          font-size: 11px;
-          margin-left: 4px;
-        }
-      }
-    }
-  }
+//     .number {
+//       position: relative;
+//       display: inline-block;
+//       vertical-align: middle;
+//       margin-right: 4px;
+//       border: 1px solid #848484;
+//       box-sizing: border-box;
+//       @if($type == 'basic') {
+//         width: 26px;
+//         height: 32px;
+//         font-size: 20px;
+//         color: #333;
+//         line-height: 32px;
+//       }
+//       @if($type == 'is-simple') {
+//         width: 31px;
+//         height: 43px;
+//         font-size: 28px;
+//         color: white;
+//         @include font(roboto);
+//         font-weight: 500;
+//         line-height: 40px;
+//         background: linear-gradient(180deg, rgba(94, 94, 94, 0) 0%, #5E5E5E 29.69%);
+//         @include media-tamo {
+//           background: white;
+//           color: #333;
+//           width: 26px;
+//           height: 32px;
+//           font-size: 20px;
+//           line-height: 28px;
+//           font-weight: 600;
+//         }
+//       }
+//     }
+//     .unit {
+//       display: inline-block;
+//       vertical-align: middle;
+//       @if( $type == 'is-simple') {
+//         margin-left: 8px;
+//         font-size: 24px;
+//         font-weight: 600;
+//         @include media-ta {
+//           margin-left: 0;
+//           font-size: 14px;
+//         }
+//         @include media-mo {
+//           font-size: 11px;
+//           margin-left: 4px;
+//         }
+//       }
+//     }
+//   }
 
-  .cta__button {
-    display: flex;
-    width: 100%;
-    height: 38px;
-    background: #0f5edd;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    align-items: center;
-    justify-content: center;
-    @if( $type == 'is-simple') {
-      display: block;
-      background: #5D04D9;
-      height: 48px;
-      font-size: 20px;
-      @include media-mo {
-        height: 38px;
-        font-size: 14px;
-      }
-    }
-    &:after {
-      content: "";
-      width: 5px;
-      height: 5px;
-      margin-left: 8px;
-      border-top: 2px solid #fff;
-      border-left: 2px solid #fff;
-      transform: rotate(135deg);
-      @if( $type == 'is-simple') {
-        content: none;
-      }
-    }
-  }
+//   .cta__button {
+//     display: flex;
+//     width: 100%;
+//     height: 38px;
+//     background: #0f5edd;
+//     border-radius: 5px;
+//     color: #fff;
+//     font-size: 14px;
+//     font-weight: 600;
+//     letter-spacing: -1px;
+//     align-items: center;
+//     justify-content: center;
+//     @if( $type == 'is-simple') {
+//       display: block;
+//       background: #5D04D9;
+//       height: 48px;
+//       font-size: 20px;
+//       @include media-mo {
+//         height: 38px;
+//         font-size: 14px;
+//       }
+//     }
+//     &:after {
+//       content: "";
+//       width: 5px;
+//       height: 5px;
+//       margin-left: 8px;
+//       border-top: 2px solid #fff;
+//       border-left: 2px solid #fff;
+//       transform: rotate(135deg);
+//       @if( $type == 'is-simple') {f
+//         content: none;
+//       }
+//     }
+//   }
 
-  .cta__badge {
-    position: absolute;
-    top: -60px;
-    left: -35px;
-    width: 110px;
-    height: 110px;
-    color: transparent;
-    background-size: 100%;
-    background: url($url + "/challenge2_cta_badge.png") no-repeat 50% 0;
-    background-size: 100%;
-    display: none;
-    @if( $type == 'basic') {
-      display: block;
-    }
-    @media (min-width: 768px) {
-      top: -80px;
-      left: -100px;
-      width: 145px;
-      height: 145px;
-    }
-  }
-}
+//   .cta__badge {
+//     position: absolute;
+//     top: -60px;
+//     left: -35px;
+//     width: 110px;
+//     height: 110px;
+//     color: transparent;
+//     background-size: 100%;
+//     background: url($url + "/challenge2_cta_badge.png") no-repeat 50% 0;
+//     background-size: 100%;
+//     display: none;
+//     @if( $type == 'basic') {
+//       display: block;
+//     }
+//     @media (min-width: 768px) {
+//       top: -80px;
+//       left: -100px;
+//       width: 145px;
+//       height: 145px;
+//     }
+//   }
+// }
 
 
-.challenge-cta {
-  @include type();
+// .challenge-cta {
+//   @include type();
 
-  &.is-simple {
-    @include type('is-simple');
-  }
+//   &.is-simple {
+//     @include type('is-simple');
+//   }
 
-  &.is-info {
-    @include type('is-info');
-  }
-}
+//   &.is-info {
+//     @include type('is-info');
+//   }
+// }

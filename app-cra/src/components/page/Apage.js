@@ -6,7 +6,7 @@ const cx = classNames.bind(style);
 
 const Apage = () => {
   return (
-    <div className="">
+    <>
       <div className="Apage">
         <div className="slide">
           슬라이드
@@ -19,7 +19,7 @@ const Apage = () => {
           </div>
           <div className="textarea__option">
             <div className="title">365올패스 옵션 선택</div>
-            <div className="select">
+            <div className="l-select">
               <span className="badge-red">추천</span>Global 12개월 20분 주 2회
             </div>
           </div>
@@ -36,8 +36,8 @@ const Apage = () => {
           <div className="textarea__price">
             <p>할인 적용 가격 <span className="line-through">정가 1,372,000원</span></p>
             <div className="price">
-              <span className="color-red">65%</span>
-              40,000원/월
+              <span className="color-red">65<span className="text">%</span></span>
+              40,000<span className="text">원/월</span>
             </div>
           </div>
           <div className="btn">바로 구매</div>
@@ -58,6 +58,7 @@ const Apage = () => {
       </section>
 
       {/* 카운트 다운 */}
+      {/* 기간 종료일시 is-date-end 넣으면 됩니다. */} 
       <section className={cx('count-down')}>
         <div className={cx('title-img')}></div>
         <div className={cx('day')}>
@@ -224,11 +225,53 @@ const Apage = () => {
               </div>
               <div className="selected-option">
                 <h2 className={cx("heading")}>선택옵션</h2>
-                <p>365올패스 Global 12+2개월 20분 / 주 2회 <span className="all">총 98회</span></p>
+                {/* is-on 클래스 넣으면 내부의 l-selcted-item 이 보여집니다. */}
+                <div class="l-select is-on">
+                  <p>
+                    <span class="badge-red">추천</span>Global 12개월 20분 주 2회
+                  </p>
+                  <div className="l-select-item"> 
+                    <div className="title">365올패스 Global 12개월</div>
+                    <ul>
+                    {/* 선택되어있는 상태 : is-selected */}
+                      <li>
+                        <span className="badge-red">추천</span>
+                        <div className="textwrap left">
+                          {/* tag에는 native, global, puriod 타입이 있습니다. */}
+                          <span className="tag native">GLOBAL</span>
+                          <span className="tag puriod">2개월 연장</span>
+                          <p>20분/주2회</p>
+                          <div className="text">총 98회</div>
+                        </div>
+                        <div className="textwrap right">
+                          <div className="line-through">정가 1,960,000원</div>
+                          <span className="color-red">60%</span>
+                          <span className="text">65,3000/월</span>
+                        </div>
+                      </li>
+                      <li className="sub-title"> 365 올패스 Native 6개월 </li>
+                      <li>
+                        <span className="badge-red">추천</span>
+                        <div className="textwrap left">
+                          {/* tag에는 native, global, puriod 타입이 있습니다. */}
+                          <span className="tag native">GLOBAL</span>
+                          <span className="tag puriod">2개월 연장</span>
+                          <p>20분/주2회</p>
+                          <div className="text">총 98회</div>
+                        </div>
+                        <div className="textwrap right">
+                          <div className="line-through">정가 1,960,000원</div>
+                          <span className="color-red">60%</span>
+                          <span className="text">65,3000/월</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="btnwrap">
-              <div className="price">40,000원/<span className={cx('')}>월</span></div>
+              <div className="price">40,000원<span className={cx('text')}>/월</span></div>
               <button type="button" className={cx("cta__button")} >구매하기</button>
             </div>
           </div>
@@ -257,7 +300,7 @@ const Apage = () => {
           <div className="dim"></div>
         </article>
       </section>
-    </div>
+    </>
   );
 };
 

@@ -67,6 +67,7 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
   display: inline-block;
   color: white;
   min-width: 33px;
+  height: 16px;
   line-height: 16px;
   border-radius: 10vw;
   background: #FF1212;
@@ -80,15 +81,176 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
   color: #ff1212;
   font-weight: 700;
 }
+.l-select {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  padding-left: 15px;
+  line-height: 38px;
+  border: 1px solid #ddd;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  &.is-on {
+    .l-select-item {
+      display: block;
+    }
+  }
+  @include media-tamo() {
+    margin-top: 18px;
+    line-height: 60px;
+    border-radius: 5px;
+    border-color: #999;
+  }
+  &:after {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 7px;
+    height: 7px;
+    margin-left: 8px;
+    border-top: 2px solid #ddd;
+    border-left: 2px solid #ddd;
+    transform: rotate(225deg);
+    content:'';
+    @include media-tamo() {
+      right: 27px;
+      width: 9px;
+      height: 9px;
+      bottom: auto;
+      border-color: #333;
+      transform: rotate(135deg);
+    }
+  }
+}
+.l-select-item {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  left: 0;
+  border: 1px solid #ddd;
+  background: white;
+  .title {
+    position: relative;
+    font-size: 14px;
+    color: #333;
+    line-height: 42px;
+    padding-left: 20px;
+    font-weight: 500;
+    &:after {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      width: 7px;
+      height: 7px;
+      margin-left: 8px;
+      border-top: 2px solid #ddd;
+      border-left: 2px solid #ddd;
+      transform: rotate(45deg);
+      content:'';
+    }
+  }
+  ul {
+    max-height: 208px;
+    overflow: auto;
+  }
+  li {
+    position: relative;
+    width: 100%;
+    display: table;
+    padding: 20px 30px 23px 30px;
+    background: white;
+    justify-content: space-between;
+    box-sizing: border-box;
+    line-height: 1;
+    border: 1px solid rgba(239, 239, 239, 0.5);
+    &:hover, &.is-selected {
+      background: #f6f6f6;
+    }
+    &.sub-title {
+      padding: 31px 0 15px 30px;
+      border-top: 10px solid #f6f6f6;
+      &:hover {
+        background: white;
+      }
+    }
+    .textwrap {
+      display: inline-block;
+      width: 50%;
+      padding: 0;
+      width: 50%;
+      .line-through {
+        font-size: 12px;
+        text-decoration: line-through;
+        color: #ccc;
+      }
+      &.left {
+        .text {
+          font-weight: 500;
+        }
+      }
+      &.right {
+        text-align: right;
+        .text {
+          display: inline-block;
+          margin-top: 4px;
+          font-size: 16px;
+          font-weight: 700;
+          margin-left: 6px;
+        }
+      }
+    }
+    .badge-red {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+    .tag {
+      display: inline-block;
+      color: white;
+      line-height: 16px;
+      font-size: 8px;
+      padding: 0px 6px;
+      border-radius: 10vw;
+      margin-right: 3px;
+      &.puriod {
+        background: black;
+      }
+      &.global {
+        background: #5d04d9;
+      }
+      &.native {
+        background: #ff1212;
+      }
+    }
+    p {
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .text {
+      margin-top: 7px;
+      font-size: 14px;
+    }
+  }
+}
 
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 .Apage {
   display: flex;
   justify-content: center;
   padding-top: 200px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 102px;
+  padding-bottom: 131px;
   @include media-tamo() {
     padding-top: 0;
     flex-direction: column;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   .slide {
     width: 570px;
@@ -103,10 +265,21 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
   .atype {
     max-width: 583px;
     width: 100%;
+    @include media-tamo() {
+      max-width: 100%;
+    }
     .textarea {
       text-align: left;
+      margin-top: 30px;
+        @include media-tamo() {
+          max-width: 320px;
+          margin: 0 auto;
+          margin-top: 66px;
+          margin-bottom: 44px;
+        }
       &__title {
-        border-bottom: 1px solid #000;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
         @include media-tamo() {
           display: none;
         }
@@ -114,24 +287,23 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
           font-size: 20px;
           line-height: 24px;
           letter-spacing: -1px;
-        }
-        .date {
-          color: #333;
-        }
-      }
-      &__option {
-        .title {
           font-weight: 700;
         }
-        .select {
-          padding-left: 15px;
-          line-height: 38px;
-          border: 1px solid #ddd;
+        .date {
+          margin-top: 14px;
           color: #333;
           font-size: 14px;
         }
       }
+      &__option {
+        .title {
+          margin-top: 39px;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+      }
       &__info {
+        margin-top: 40px;
         @include media-tamo() {
           display: none;
         }
@@ -140,10 +312,12 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
           font-weight: 700;
         }
         ul {
-          margin-top: 20px;
+          margin-top: 18px;
           li {
+            margin-bottom: 13px;
             color: #333;
             font-weight: 700;
+            font-size: 14px;
           }
           strong {
             display: inline-block;
@@ -152,20 +326,40 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
             font-weight: 400;
           }
           .q {
+            position: relative;
             display: inline-block;
             text-align: center;
-            line-height: 20px;
+            line-height: 18px;
             font-size: 14px;
             color: #aaa;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             border: 1px solid #ddd;
-            cursor: pointer;
+            // cursor: pointer;
+            &:hover {
+              &:after {
+                position: absolute;
+                left: -1px;
+                top: -2px;
+                width: 340px;
+                height: 70px;
+                background: #ddd;
+                content:'';
+              }
+            }
           }
         }
       }
       &__price {
+        margin-top: 38px;
+        padding-top: 40px;
+        border-top: 1px solid #ddd;
+        @include media-tamo() {
+          margin-top: 16px;
+          padding-top: 0;
+          border: none;
+        }
         p {
           color: #a1a1a1;
           font-weight: 700;
@@ -177,16 +371,34 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
           margin-left: 10px;
         }
         .price {
+          padding-top: 12px;
           font-weight: 700;
           font-size: 28px;
+          @include media-tamo() {
+            font-size: 38px;
+          }
+          span {
+            font-weight: inherit;
+          }
           .color-red {
             display: inline-block;
             margin-right: 8px;
+            @include media-tamo() {
+              .text {
+                font-size: 20px;
+              }
+            }
+          }
+          .text {
+            @include media-tamo() {
+              font-size: 15px;
+            }
           }
         }
       }
       .btn {
         display: inline-flex;
+        margin-top: 50px;
         width: 100%;
         justify-content: center;
         align-items: center;
@@ -211,7 +423,8 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
     display: none;
     @include media-tamo() {
       display: block;
-      padding-top: 48px;
+      padding-top: 51px;
+      padding-bottom: 60px;
       background: #F6F6F6;      
     }
     p {
@@ -224,13 +437,15 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
     }
     .img {
       margin: 0 auto;
+      margin-top: 25px;
       width: 320px;
       height: 351px;
-      background: url($route + '/bird_tutor_mo_img.png') no-repeat center;
+      background: url($route + 'bird_tutor_mo_img.png') no-repeat center;
       background-size: contain;
     }
   }
 }
+
 .early-bird {
   padding: 100px 0;
   background: #001F6E;
@@ -299,25 +514,31 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
   background: #f6f6f6;
   padding: 100px 0;
   text-align: center;
-
   @include media-tamo {
     padding: 89px 0;
   }
 
   &.is-date-end {
+    padding: 100px 0 114px 0;
+    @include media-tamo() {
 
-    // TODO: 기간 오늘일때 
-    .day,
-    .timer {
+    }
+    .day, .timer {
       display: none;
     }
 
     .title-img {
       margin: 0 auto;
-      width: 259px;
-      height: 259px;
-      background: url($route + "bird_end_mo_img.png") no-repeat center;
+      width: 507px;
+      height: 393px;
+      background: url($route + "bird_end_pc_img.png") no-repeat center;
       background-size: contain;
+      @include media-tamo() {
+        width: 259px;
+        height: 259px;
+        background: url($route + "bird_end_mo_img.png") no-repeat center;
+        background-size: contain;
+      }
     }
   }
 
@@ -1072,7 +1293,12 @@ $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
       backdrop-filter: blur(10px);
     }
     @if( $type == 'is-info') {
+      border-top: 1px solid #ddd;
       background: white;
+      @include media-tamo() {
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+      }
     }
   }
   .wrapper {
@@ -1088,17 +1314,26 @@ $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
     @include media-tamo {
       padding: 20px 50px;
     }
-    @if ( $type == 'is-simple') {
+    @if ( $type == 'is-simple' or $type == 'is-info') {
       @include media-mo {
         padding: 10px 30px;
       }
     }
-    .textwrap, .btnwrap {
+    @if ( $type == 'is-info') {
+      padding: 23px 0 24px 0;
+    }
+    > .textwrap, >.btnwrap {
       display: table-cell;
       vertical-align: middle;
     }
-    .textwrap {
+    >.textwrap {
       text-align: left;
+      @if ( $type == 'is-info') {
+        padding: 0 0 10px 0;
+        @include media-tamo() {
+          padding: 0;
+        }
+      }
     }
     .btnwrap {
       @if ( $type == 'is-simple') {
@@ -1110,22 +1345,52 @@ $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
           width: 46%;
         }
       }
+      @if ( $type == 'is-info') {
+        width: 30%;
+        @include media-tamo() {
+          width: 40%;
+        }
+      }
     }
     .price {
       display: none;
       @if( $type == 'is-info') {
         display: block;
+        text-align: right;
+        font-size: 30px;
+        font-weight: 800;
+        color: #7613ff;
+        @include media-tamo() {
+          display: none;
+        }
+        .text {
+          color: black;
+          font-weight: 700;
+        }
       }
     }
   }
 
-  .seleted-option {
+  .selected-option {
     display: none;
     @if( $type == 'is-info') {
       display: block;
-      p {
-        display: inline-block;
+      margin-top: 18px;
+      @include media-tamo() {
+        display: none;
       }
+      // p {
+      //   display: inline-block;
+      //   vertical-align: middle;
+      //   font-size: 20px;
+      //   font-weight: 700;
+      //   .all {
+      //     font-weight: 500;
+      //   }
+      // }
+    }
+    .l-select {
+      width: calc(100% - 120px);
     }
   }
   .heading {
@@ -1155,6 +1420,8 @@ $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
     }
     @if( $type == 'is-info') {
       color: #999;
+      font-size: 16px;
+      margin-right: 40px;
     }
   }
 
@@ -1180,15 +1447,10 @@ $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
         color: #333;
         line-height: 32px;
       }
-      @if($type == 'is-simple') {
+      @if( $type == 'is-simple' or $type == 'is-info') {
         width: 31px;
         height: 43px;
         font-size: 28px;
-        color: white;
-        @include font(roboto);
-        font-weight: 500;
-        line-height: 40px;
-        background: linear-gradient(180deg, rgba(94, 94, 94, 0) 0%, #5E5E5E 29.69%);
         @include media-tamo {
           background: white;
           color: #333;
@@ -1199,14 +1461,31 @@ $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
           font-weight: 600;
         }
       }
+      @if($type == 'is-simple') {
+        width: 31px;
+        height: 43px;
+        font-size: 28px;
+        color: white;
+        @include font(roboto);
+        font-weight: 500;
+        line-height: 40px;
+        background: linear-gradient(180deg, rgba(94, 94, 94, 0) 0%, #5E5E5E 29.69%);
+      }
+      @if($type == 'is-info') {
+        background: #5d04d9;
+        color: white;
+        border: none;
+        font-weight: 700;
+        line-height: 36px;
+      }
     }
     .unit {
       display: inline-block;
       vertical-align: middle;
-      @if( $type == 'is-simple') {
-        margin-left: 8px;
+      @if( $type == 'is-simple' or $type == 'is-info') {
+        margin-left: 4px;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 700;
         @include media-ta {
           margin-left: 0;
           font-size: 14px;
@@ -1214,6 +1493,11 @@ $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
         @include media-mo {
           font-size: 11px;
           margin-left: 4px;
+        }
+      }
+      @if( $type == 'is-info') {
+        @include media-tamo() {
+          color: white;
         }
       }
     }
@@ -1241,6 +1525,21 @@ $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
         font-size: 14px;
       }
     }
+    @if ( $type == 'is-info') {
+      margin-top: 17px;
+      max-width: 240px;
+      width: 100%;
+      margin-left: auto;
+      background: #5d04d9;
+      font-size: 20px;
+      height: 48px;
+      @include media-tamo {
+        margin-top: 0;
+        height: 38px;
+        font-size: 14px;
+        max-width: initial;
+      }
+    }
     &:after {
       content: "";
       width: 5px;
@@ -1250,6 +1549,9 @@ $url: "http://res.tutoring.co.kr/res/images/evt/202106/challenge2/";
       border-left: 2px solid #fff;
       transform: rotate(135deg);
       @if( $type == 'is-simple') {
+        content: none;
+      }
+      @if( $type == 'is-info') {
         content: none;
       }
     }
