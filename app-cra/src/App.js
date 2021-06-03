@@ -21,11 +21,13 @@ function App() {
       <Slide/>
       
       {/* kv A 타입 */}
-      <Atype/>
+      {/*
+        <Atype/>
+       */}
 
       {/* kv B 타입 */}
+      <Btype/>
       {/*
-        <Btype/>
        */}
 
       {/* 65% 이미지 */}

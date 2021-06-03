@@ -20,6 +20,7 @@ const Sheet = () => {
           </div>
           <p><strong>20분 / 주2회</strong> <span className={cx('all')}>총98회</span></p>
         </div>
+        
         <div className="price-wrap">
           <strong>할인 적용 가격</strong>
           <span className={cx('price-area')}>

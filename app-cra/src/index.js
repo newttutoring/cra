@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
   {/*
     <App />
-     */}
+  */}
   <Apage/>
   </React.StrictMode>,
   document.getElementById('root')
