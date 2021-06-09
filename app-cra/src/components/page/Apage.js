@@ -7,47 +7,56 @@ const cx = classNames.bind(style);
 const Apage = () => {
   return (
     <>
+      <div id="wrap">
+        aaaaaaaa
+	      <div id="header">헤더</div>
+        <div class="page">랜딩</div>
+      </div>
+
+      <div class="alpha">alpha</div>
+      <div class="beta">beta</div>
+
       <div className={cx("Apage")}>
         <div className={cx("slide")}>
           슬라이드
         </div>
         <div className={cx('atype')}>
-        <div className={cx("textarea")}>
-          <div className={cx("textarea__title")}>
-            <div className={cx("title")}>2021년 하반기 영어 미리 준비! <br />15일간의 얼리버드</div>
-            <div className={cx("date")}>2021. 06 .07 - 2021. 06. 21</div>
-          </div>
-          <div className={cx("textarea__option")}>
-            <div className={cx("title")}>365올패스 옵션 선택</div>
-            <div className={cx("l-select")}>
-              <span className={cx("badge-red")}>추천</span>Global 12개월 20분 주 2회
+          <div className={cx("textarea")}>
+            <div className={cx("textarea__title")}>
+              <div className={cx("title")}>2021년 하반기 영어 미리 준비! <br />15일간의 얼리버드</div>
+              <div className={cx("date")}>2021. 06 .07 - 2021. 06. 21</div>
             </div>
-          </div>
-          <div className={cx("textarea__info")}>
-            <div className={cx("title")}>옵션 상세</div>
-            <ul>
-              <li><strong>정상가</strong>1,372,000원</li>
-              <li><strong>정상가</strong>1,372,000원 <span className={cx("color-red")}>65%</span></li>
-              <li><strong>수업 시간</strong>20분 / 주 2회/ 총 98회</li>
-              <li><strong>튜터 타입</strong>GLOBAL <span className={cx("q")}>?</span></li>
-              <li><strong>추가 혜택</strong>2개월 연장</li>
-            </ul>
-          </div>
-          <div className={cx("textarea__price")}>
-            <p>할인 적용 가격 <span className={cx("line-through")}>정가 1,372,000원</span></p>
-            <div className={cx("price")}>
-              <span className={cx("color-red")}>65<span className={cx("text")}>%</span></span>
+            <div className={cx("textarea__option")}>
+              <div className={cx("title")}>365올패스 옵션 선택</div>
+              <div className={cx("l-select")}>
+                <span className={cx("badge-red")}>추천</span>Global 12개월 20분 주 2회
+            </div>
+            </div>
+            <div className={cx("textarea__info")}>
+              <div className={cx("title")}>옵션 상세</div>
+              <ul>
+                <li><strong>정상가</strong>1,372,000원</li>
+                <li><strong>정상가</strong>1,372,000원 <span className={cx("color-red")}>65%</span></li>
+                <li><strong>수업 시간</strong>20분 / 주 2회/ 총 98회</li>
+                <li><strong>튜터 타입</strong>GLOBAL <span className={cx("q")}>?</span></li>
+                <li><strong>추가 혜택</strong>2개월 연장</li>
+              </ul>
+            </div>
+            <div className={cx("textarea__price")}>
+              <p>할인 적용 가격 <span className={cx("line-through")}>정가 1,372,000원</span></p>
+              <div className={cx("price")}>
+                <span className={cx("color-red")}>65<span className={cx("text")}>%</span></span>
               40,000<span className={cx("text")}>원/월</span>
+              </div>
             </div>
+            <div className={cx("btn")}>바로 구매</div>
           </div>
-          <div className={cx("btn")}>바로 구매</div>
-        </div>
 
-        <div className={cx("imgwrap")}>
-          <p>튜터 타입이 <br />궁금하신가요?</p>
-          <div className={cx("img")}></div>
+          <div className={cx("imgwrap")}>
+            <p>튜터 타입이 <br />궁금하신가요?</p>
+            <div className={cx("img")}></div>
+          </div>
         </div>
-      </div>
       </div>
       {/* 65% 2개월 */}
       <section className={cx('early-bird')}>
@@ -58,7 +67,7 @@ const Apage = () => {
       </section>
 
       {/* 카운트 다운 */}
-      {/* 기간 종료일시 is-date-end 넣으면 됩니다. */} 
+      {/* 기간 종료일시 is-date-end 넣으면 됩니다. */}
       <section className={cx('count-down')}>
         <div className={cx('title-img')}></div>
         <div className={cx('day')}>
@@ -230,10 +239,10 @@ const Apage = () => {
                   <p>
                     <span className={cx("badge-red")}>추천</span>Global 12개월 20분 주 2회
                   </p>
-                  <div className={cx("l-select-item")}> 
+                  <div className={cx("l-select-item")}>
                     <div className={cx("title")}>365올패스 Global 12개월</div>
                     <ul>
-                    {/* 선택되어있는 상태 : is-selected */}
+                      {/* 선택되어있는 상태 : is-selected */}
                       <li>
                         <span className={cx("badge-red")}>추천</span>
                         <div className={cx("textwrap left")}>
@@ -276,9 +285,9 @@ const Apage = () => {
             </div>
           </div>
         </div>
-    {/* TODO: 애니메이션 타입 정의하기 (ex : bottom-up, left-right ) */}
-    {/* is-show 넣으면 올라옵니다. */}
-    <article className={cx('sheet')}>
+        {/* TODO: 애니메이션 타입 정의하기 (ex : bottom-up, left-right ) */}
+        {/* is-show 넣으면 올라옵니다. */}
+        <article className={cx('sheet')}>
           <div className={cx("sheet__wrap")}>
             <div className={cx("info")}>
               <div className={cx("btn")}></div>

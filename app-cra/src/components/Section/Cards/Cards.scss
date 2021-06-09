@@ -14,3 +14,22 @@ $url: 'https://res.tutoring.co.kr/res/images/evt/202105/oh';
     }
   }
 }
+
+@mixin example {
+  .alpha {
+    @content (alpha);
+  }
+  .beta {
+    @content (beta);
+  }
+}
+
+  @include example using ($slot) {
+    @if $slot == alpha {
+      /* Alpha content */
+      color :red;
+    } @else if $slot == beta {
+      /* Beta content */
+      color :blue;
+    }
+  }

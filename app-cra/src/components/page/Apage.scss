@@ -237,6 +237,42 @@ $route2: 'https://res.tutoring.co.kr/res/images/evt/com';
   }
 }
 
+
+// @use 'sass:list'; // 선언 안하면 list 사용못함
+
+// $url-list: '.page', '.test'; // 랜딩페이지 클래스 
+// $boolean: ''; // 추후 전역 상태관리용
+
+// @mixin class-check($classname) {
+// 	@if list.index($url_list, $classname) {
+// 		// true
+// 		#header {
+// 			#wrap & {
+// 				background: red;
+// 			}
+// 		}
+// 		#{$classname} {
+// 			@content;
+// 		}
+// 	}
+// 	@else {
+// 		// false
+// 		#header {
+// 			#wrap & {
+// 				background: black;
+// 			}
+// 		}
+// 	}
+// }
+
+// // 위의 $url-list에 없는 단어를 넣어보세요
+// @include class-check('.page') { 
+// 	color: blue;	
+// 	font-weight: bold;
+// };
+
+
+
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 .Apage {
   display: flex;
