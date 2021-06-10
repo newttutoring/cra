@@ -1,0 +1,21 @@
+.custom-slide {
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  ul {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+  }
+  li {
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    background: #ccc;
+  }
+  button {
+    min-width: 300px;
+    height: 50px;
+    
+  }
+}

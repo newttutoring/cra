@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/assets/style/index.scss';
 import App from './App';
+import CustomSlide from './components/customslide/CustomSlide';
 import Apage from './components/page/promotion/Apage';
 import Atype from './components/Section/Atype/Atype';
 import reportWebVitals from './reportWebVitals';
@@ -12,6 +13,7 @@ ReactDOM.render(
     <App />
     <Apage/>
   */}
+  <CustomSlide/>
   </React.StrictMode>,
   document.getElementById('root')
 );
