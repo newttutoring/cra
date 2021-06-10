@@ -4,16 +4,12 @@ import './customslide.scss';
 const CustomSlide = () => {
   const [move, setMove] = useState(0);
   let transformPostion = 0;
-  const left = (transformPostion) => {
-    console.log('왼쪽');
-    transformPostion = transformPostion - 100;
-    setMove(transformPostion);
+
+  const left = (move) => {
+    move == 0 ? console.log('dd') : setMove(move + 100);
   }
-  const right = (transformPostion) => {
-    console.log('오른쪽');
-    transformPostion = transformPostion + 100;
-    console.log(transformPostion);
-    setMove(transformPostion);
+  const right = (move) => {
+    move == -200 ? console.log('dd') : setMove(move - 100);
   }
 
   return (
@@ -21,13 +17,12 @@ const CustomSlide = () => {
     {
       transformPostion
     }
-      <ul style={{transform: 'translateX(' + move + '%)' }}>
-        <li>1number</li>
-        <li>2number</li>
+      <ul style={{transform: 'translateX(' + move + '%)', transition: 'all 1s' }}>
+        <li>1number</li>f
         <li>3number</li>
       </ul>
-      <button className="left" onClick={()=>left(transformPostion)}>왼쪽</button>
-      <button className="right" onClick={()=>right(transformPostion)}>오른쪽</button>
+      <button className="left" onClick={()=>left(move)}>왼쪽</button>
+      <button className="right" onClick={()=>right(move)}>오른쪽</button>
     </div>
   );
 };
