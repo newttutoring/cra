@@ -14,6 +14,7 @@ $pc: 1200;
   }
 }
 
+// 미디어쿼리 정의
 @mixin media-mo($mode:'default') {
   @media (max-width: $mobile+'px') {
     @content;
@@ -38,21 +39,128 @@ $pc: 1200;
   }
 }
 
-.pc-layer {
-  display: block;
-  @include media-tamo() {
-    display: none;
+@mixin custom-media($start-resolution, $end-resolution, $landscape : false) {
+  @if ($landscape==true) {
+    @media (min-width: $start-resolution+'px') and (max-width: $end-resolution+'px') and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: $start-resolution+'px') and (max-width: $end-resolution+'px') {
+      @content;
+    }
   }
 }
-.tamo-layer {
-  display: none;
-  @include media-tamo() {
+
+// ios 8 대응 pixel-ratio, pixel-ratio ios8 : 2, 노트 10+: 2.5, 아이폰 12pro: 3
+@mixin custom-media-ratio($number) {
+  @media
+  (-webkit-min-device-pixel-ratio: $number)      and (max-width: $breakpoints-mobile+'px'),
+  (   min--moz-device-pixel-ratio: $number)      and (max-width: $breakpoints-mobile+'px'),
+  (     -o-min-device-pixel-ratio: $number)    and (max-width: $breakpoints-mobile+'px'),
+  (        min-device-pixel-ratio: $number)      and (max-width: $breakpoints-mobile+'px')  {
+
+  // @media (max-width: $breakpoints-mobile+'px') and (-webkit-min-device-pixel-ratio: $number),
+  // @media (max-width: $breakpoints-mobile+'px') and (min-device-pixel-ratio: $number){
+    @content;
+  }
+}
+
+// 기본
+@mixin clearfix() {
+  &:after {
     display: block;
+    clear: both;
+    content: '';
   }
 }
-.m-layer {
-  display: none;
-  @include media-mo() {
-    display: none;
+
+// 말줄임
+@mixin dotdotdot($type:dot) {
+  @if($type==dot) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @content;
+  }
+
+  @if($type==remove) {
+    white-space: normal;
+    overflow: inherit;
+    text-overflow: inherit;
+    @content;
+  }
+}
+
+// 멀티라인 dotdotdot
+@mixin multi-dotdotdot($font-size, $lines-to-show, $line-height:1.5) {
+  display: block;
+  /* Fallback for non-webkit */
+  display: -webkit-box;
+  // box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines-to-show;
+  // display: box;
+  // max-width: 400px;
+  max-width: 100%;
+  height: $font-size*$line-height*$lines-to-show;
+  /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: $font-size;
+  line-height: $line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// inline-block 세로 중앙정렬
+@mixin vertical-center($mode:"before") {
+  @if($mode=='before') {
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      content: '';
+      @content;
+    }
+  }
+
+  @if($mode=='after') {
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      content: '';
+    }
+  }
+}
+
+// text-indent 
+@mixin text-indent($pixel, $type: 'true') {
+  @if ($type=='true') {
+    padding-left: #{$pixel};
+    text-indent: -#{$pixel};
+  }
+
+  @if ($type=='init') {
+    padding-left: 0;
+    text-indent: 0;
+  }
+}
+
+// scroll-bar-bg, scroll-bar-track-bg
+@mixin custom-scrollbar ($scroll-bar-bg, $scroll-track-bg, $width, $option...) {
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    @content;
+  }
+
+  &::-webkit-scrollbar {
+    width: $width;
+    background: #{$scroll-bar-bg};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #{$scroll-track-bg};
   }
 }

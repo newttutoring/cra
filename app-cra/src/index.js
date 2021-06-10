@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/assets/style/index.scss';
 import App from './App';
-import Apage from './components/page/Apage';
+import Apage from './components/page/promotion/Apage';
 import Atype from './components/Section/Atype/Atype';
 import reportWebVitals from './reportWebVitals';
 
@@ -10,8 +10,8 @@ ReactDOM.render(
   <React.StrictMode>
   {/*
     <App />
+    <Apage/>
   */}
-  <Apage/>
   </React.StrictMode>,
   document.getElementById('root')
 );
