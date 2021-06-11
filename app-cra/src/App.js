@@ -13,53 +13,31 @@ import Atype from './components/Section/Atype/Atype';
 import Cta from './components/cta/cta';
 import PurpleMobile from './components/Section/PurpleMobile/PurpleMobile';
 import Slide from './components/Section/Slide/Slide';
+import Router from './Router';
+
+// 이제 안쓰는 파일
 
 function App() {
   return (
     <div className="App">
       {/* 슬라이드 배너 */}
+      {/*
+      <Atype/>
       <Slide/>
-      
-      {/* kv A 타입 */}
-      {/*
-        <Atype/>
-       */}
-
-      {/* kv B 타입 */}
-      <Btype/>
-      {/*
-       */}
-
-      {/* 65% 이미지 */}
-      <EarlyBird/>
-
-      {/* 숫자 카운트 */}
-      <CountDown/>
-
-      {/* 언택트 시대 튜터링으로 영어 해결! */}
-      <Trinity/>
-
-      {/* 보라색 핸드폰 */}
-      <Explan/>
-
-      {/* 일상 속 완벽한 영어 환경 */}
-       <PurpleMobile/>
-
-      {/* 카드 들 */}
-      <Cards/>
-
-      {/* 검은 배경  */}
-      <Pride/>
-
-      {/* 후기 */}
-      <Review/>
-
-      {/* 안내문구 */}
-      <Notice/>
-
-      {/* cta 
-        <Cta/>
-      */}
+    <Btype/>
+    <EarlyBird/>
+    <CountDown/>
+    <Trinity/>
+    <Explan/>
+    <PurpleMobile/>
+    <Cards/>
+    <Pride/>
+    <Review/>
+    <Notice/>
+    <Cta/>
+        <CustomSlide/>
+    <LearnConsultReserve/>
+  */}
     </div>
   );
 }

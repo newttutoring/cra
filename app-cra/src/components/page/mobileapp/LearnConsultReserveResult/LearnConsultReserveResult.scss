@@ -1,0 +1,88 @@
+
+.LearnConsultReserve-page-result {
+  .content {
+    margin-top: 102px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .l-table {
+      display: table;
+      max-width: 234px;
+      margin-top: 17px;
+      width: 100%;
+      border: 1px solid #d9d9d9;
+      border-radius: 7px;
+      overflow: hidden;
+      .l-table-row {
+        display: table-row;
+      }
+      .l-table-cell {
+        display: table-cell;
+        word-break: keep-all;
+        vertical-align: middle;
+        height: 41px;
+        padding-left: 10px;
+        font-size: 13px;
+        box-sizing: border-box;
+        font-weight: 500;
+        &.th {
+          background: #f7f7f7;
+          font-weight: 700;
+        }
+      }
+    }
+    p {
+      font-size: 18px;
+      letter-spacing: -1.22px;
+      text-align: center;
+      font-weight: 500;
+      strong {
+        margin-top: 8px;
+        font-size: 16px;
+        display: block;
+        font-weight: 700;
+      }
+    }
+    .desc {
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &:before {
+        display: inline-block;
+        background: url("//res.tutoring.co.kr/res/images/common/ico_comm.png") no-repeat center;
+        background-size: 220px 188px;
+        width: 16px;
+        height: 16px;
+        background-position: -160px -104px;
+        vertical-align: top;
+        margin-right: 4px;
+        content:'';
+      }
+    }
+    .img {
+      width: 260px;
+      height: 167px;
+      margin: 17px auto 11px;
+      background: url("//res.tutoring.co.kr/res/images/team/img/tudal//img_counsel1_tudal.png") no-repeat center;
+      background-size: contain;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 170px;
+      height: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      background: #34bcff;
+      color: #fff;
+      border-radius: 10vw;
+      // border-radius: 24px;
+    }
+  }
+}

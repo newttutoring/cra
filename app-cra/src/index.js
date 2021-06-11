@@ -1,19 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/assets/style/index.scss';
-import App from './App';
-import CustomSlide from './components/customslide/CustomSlide';
-import Apage from './components/page/promotion/Apage';
-import Atype from './components/Section/Atype/Atype';
 import reportWebVitals from './reportWebVitals';
+import Router from './Router'
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-  {/*
-    <App />
-    <Apage/>
-  */}
-  <CustomSlide/>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

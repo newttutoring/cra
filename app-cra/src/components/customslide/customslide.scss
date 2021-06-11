@@ -6,6 +6,7 @@
     // overflow: hidden;
     width: 100%;
     white-space: nowrap;
+    transition: all 1s;
   }
   li {
     display: inline-block;
@@ -19,6 +20,10 @@
   button {
     min-width: 300px;
     height: 50px;
-
+    background: yellowgreen;
+    &.is-end {
+      background: #eee;
+      pointer-events: none;
+    }
   }
 }

@@ -46,6 +46,7 @@ button {
   border: none;
   margin: 0;
   padding: 0;
+  -webkit-appearance: button;
   cursor: pointer;
 }
 img {
@@ -54,6 +55,9 @@ img {
 }
 a {
   display: block;
+}
+label {
+  cursor: pointer;
 }
 
 * {

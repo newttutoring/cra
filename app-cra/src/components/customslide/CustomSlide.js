@@ -9,20 +9,21 @@ const CustomSlide = () => {
     move == 0 ? console.log('dd') : setMove(move + 100);
   }
   const right = (move) => {
-    move == -200 ? console.log('dd') : setMove(move - 100);
+    move == -500 ? console.log('dd') : setMove(move - 100);
   }
 
   return (
     <div className="custom-slide">
-    {
-      transformPostion
-    }
-      <ul style={{transform: 'translateX(' + move + '%)', transition: 'all 1s' }}>
-        <li>1number</li>f
+      <ul style={{transform: 'translateX(' + move + '%)'}}>
+        <li>1number</li>
+        <li>1number</li>
         <li>3number</li>
+        <li>4number</li>
+        <li>5number</li>
+        <li>6number</li>
       </ul>
-      <button className="left" onClick={()=>left(move)}>왼쪽</button>
-      <button className="right" onClick={()=>right(move)}>오른쪽</button>
+      <button className={move == 0 ? 'is-end' : 'left'} onClick={()=>left(move)}>왼쪽</button>
+      <button className={move == -500 ? 'is-end' : 'right'} onClick={()=>right(move)}>오른쪽</button>
     </div>
   );
 };
