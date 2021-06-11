@@ -20,8 +20,8 @@ const LearnConsultReserveResult = () => {
             <div className={cx('l-table-cell')}>비즈니스 영어</div>
           </div>
         </div>
-        <div className="desc"><span>회원님의 카카오알림톡으로 연락드립니다.</span></div>
-        <div className="img"></div>
+        <div className={cx("desc")}><span>회원님의 카카오알림톡으로 연락드립니다.</span></div>
+        <div className={cx("img")}></div>
         <button>홈으로</button>
       </div>
     </div>
