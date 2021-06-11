@@ -5,10 +5,12 @@ import LearnConsultReserveResult from './components/page/mobileapp/LearnConsultR
 
 function Router() {
   return (
-    <div>
+    <>
+      {/* 예약 신청 */}
       <Route path="/reserve" component={LearnConsultReserve} />
+      {/* 예약 신청 완료 */}
       <Route path="/result" component={LearnConsultReserveResult} />
-    </div>
+    </>
   );
 }
 
