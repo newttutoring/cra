@@ -895,32 +895,29 @@ img {
         background-position: 50% 0;
         background-size: 100%;
       }
+      $daurl: 'https://res.tutoring.co.kr/res/images/jiayou/plan/promo/da';
       &__image--1{
           width: 100%;
           height: 273px;
-          background: #48B9FF url($imgUrl2 + '/bird_thumb01_mo_img.jpg') no-repeat center; 
+          background: #42009E url($daurl + '/mb_da_thumb01.jpg') no-repeat center; 
           background-size: auto 273px;
       }
       &__image--2{
           width: 100%;
           height: 273px;
-          @for $i from 8 through 0 {
-            &--count-#{$i} {
-              background: #48B9FF url($imgUrl2 + '/bird_thumb02-'+ $i + '_mo_img.jpg') no-repeat center;
-              background-size: auto 273px;
-            }
-          }
+          background: #000 url($daurl + '/mb_da_thumb02.jpg') no-repeat center;
+          background-size: auto 273px;
       }
       &__image--3{
           width: 100%;
           height: 273px;
-          background:  #FFEF5D url($imgUrl2 + '/bird_thumb03_mo_img.jpg') no-repeat center;
+          background:  #000 url($daurl + '/mb_da_thumb03.jpg') no-repeat center;
           background-size: auto 273px;
       }
       &__image--4{
           width: 100%;
           height: 273px;
-          background: #625BE6 url($imgUrl2 + '/bird_thumb04_mo_img.jpg') no-repeat center;
+          background: #42009e url($daurl + '/mb_da_thumb04.jpg') no-repeat center;
           background-size: auto 273px;
       }
 
