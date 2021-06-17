@@ -63,7 +63,7 @@ img {
       }
     }
   }
-  .wrapper {
+  .cta-wrapper {
     position: relative;
     display: table;
     width: 100%;
@@ -298,13 +298,14 @@ img {
       max-width: 240px;
       width: 100%;
       margin-left: auto;
-      background: #5d04d9;
+      background: #CDFA64;;
       font-size: 20px;
       height: 48px;
+      color: black;
       @include media-tamo {
         margin-top: 0;
         height: 38px;
-        font-size: 14px;
+        font-size: 16px;
         max-width: initial;
       }
     }
@@ -562,7 +563,7 @@ img {
     text-align: left;
     margin-top: 21px;
       @include media-tamo() {
-        max-width: 320px;
+        max-width: calc(100% - 40px);
         margin: 0 auto;
         margin-top: 64px;
         margin-bottom: 44px;
@@ -683,6 +684,7 @@ img {
       padding-top: 40px;
       border-top: 1px solid #ddd;
       @include media-tamo() {
+        line-height: initial;
         margin-top: 15px;
         padding-top: 0;
         border: none;
@@ -753,6 +755,27 @@ img {
       }
     }
   }
+}
+
+.img1 {
+  height: 855px;
+  background: #42009E url('https://res.tutoring.co.kr/res/images/pay/zzayo/near/zzayo_randing_01_img.png') no-repeat center;
+  background-size: contain;
+}
+.img2 {
+  height: 2048px;
+  background: #000 url('https://res.tutoring.co.kr/res/images/pay/zzayo/near/zzayo_randing_02_img.png') no-repeat center;
+  background-size: contain;
+}
+.img3 {
+  height: 1701px;
+  background: #42009E url('https://res.tutoring.co.kr/res/images/pay/zzayo/near/zzayo_randing_03_img.png') no-repeat center;
+  background-size: contain;
+}
+.img4 {
+  height: 1785px;
+  background: #000 url('https://res.tutoring.co.kr/res/images/pay/zzayo/near/zzayo_randing_04_img.png') no-repeat center;
+  background-size: contain;
 }
 
 .l-select {
