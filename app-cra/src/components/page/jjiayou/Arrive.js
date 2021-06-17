@@ -28,7 +28,7 @@ const Arrive = () => {
             </div>
             <div className={cx('textarea__price')}>
               <p>
-                할인 적용 가격{" "}
+                할인 적용 가격
                 <span className={cx('line-through')}>
                   정가 <span className={cx('origin__money')}>1,372,000</span>원
                 </span>
@@ -85,7 +85,7 @@ const Arrive = () => {
                   <strong>
                     <span className="minutes">20</span>분 / 주
                     <span className="count__per__week">2</span>회
-                  </strong>{" "}
+                  </strong>
                   <span className="all">
                     총<span className="lesson_cnt">98</span>회
                   </span>
