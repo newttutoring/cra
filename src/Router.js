@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import LearnConsultReserve from './components/page/mobileapp/LearnConsultReserve/LearnConsultReserve';
-import LearnConsultReserveResult from './components/page/mobileapp/LearnConsultReserveResult/LearnConsultReserveResult';
-import Home from './components/page/home/Home';
-import Arrive from './components/page/jjiayou/Arrive';
+import LearnConsultReserve from './page/mobileapp/LearnConsultReserve/LearnConsultReserve';
+import LearnConsultReserveResult from './page/mobileapp/LearnConsultReserveResult/LearnConsultReserveResult';
+import Home from './page/home/Home';
+import Arrive from './page/jjiayou/Arrive';
 import Test from './components/test/Test';
 
 function Router() {
