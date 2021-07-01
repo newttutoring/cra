@@ -8,71 +8,68 @@ const CouponDownload = () => {
   return (
     <div className={cx("coupon-download-page")}>
       {/* 색종이 조각(confetti) 부분은 컴포넌트로 추천합니다. */}
-      <div className="confetti-wrap">
-        <div className="confetti">
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
+      <div className={cx('confetti-wrap')}>
+        <div className={cx('confetti')}>
+          <div className={cx('confetti-piece')} />
+          <div className={cx('confetti-piece')} />
+          <div className={cx('confetti-piece')} />
+          <div className={cx('confetti-piece')} />
+          <div className={cx('confetti-piece')} />
+          <div className={cx('confetti-piece')} />
+          <div className={cx('confetti-piece')} />
+          <div className={cx('confetti-piece')} />
+          <div className={cx('confetti-piece')} />
         </div>
       </div>
-      
-      <div className="content-wrap">
-        <div className="page-title">
+
+      <div className={cx('content-wrap')}>
+        <div className={cx('page-title')}>
           쿠폰 <br />
           받아가세요!
         </div>
-        <p className="desc">
+        <p className={cx('desc')}>
           회원님을 위해 튜터링이 준비했어요! <br />
           다운로드하여 할인 혜택을 누려보세요!
         </p>
 
         {/* 
-        쿠폰 선택 컴포넌트
-        defaultProps는 basic : 이벤트 쿠폰
-        props가 month 일경우 : 이달의 쿠폰
-        props로 넘길때 classname에 props넣으면되요. 
+        쿠폰 선택
       */}
-        <div className="coupon-area">
+        <div className={cx('coupon-area')}>
           <div className={cx("coupon-wrap", "month")}>
-            <div className="title">이달의 쿠폰</div>
+            <div className={cx('title')}>이달의 쿠폰</div>
             <ul>
               {/* 다운로드가 된 쿠폰ㅇ일 경우 is-download */}
               <li className={cx("is-download")}>
-                <div className="textwrap">
+                <div className={cx('textwrap')}>
                   <span>5,000</span> <p>10만원 이상 결제 시 사용 가능</p>
                 </div>
-                <div className="imgwrap" />
+                <div className={cx('imgwrap')} />
               </li>
               <li>
-                <div className="textwrap">
+                <div className={cx('textwrap')}>
                   <span>5,000</span> <p>10만원 이상 결제 시 사용 가능</p>
                 </div>
-                <div className="imgwrap" />
+                <div className={cx('imgwrap')} />
               </li>
             </ul>
             <button>쿠폰 사용하러 가기</button>
           </div>
 
           <div className={cx("coupon-wrap", "event")}>
-            <div className="title">이벤트 쿠폰</div>
+            <div className={cx('title')}>이벤트 쿠폰</div>
             <ul>
               <li>
-                <div className="textwrap">
+                <div className={cx('textwrap')}>
                   <span>5,000</span> <p>10만원 이상 결제 시 사용 가능</p>
                 </div>
-                <div className="imgwrap" />
+                <div className={cx('imgwrap')} />
               </li>
               <li>
-                <div className="textwrap">
+                <div className={cx('textwrap')}>
                   <span>5,000</span> <p>10만원 이상 결제 시 사용 가능</p>
                 </div>
-                <div className="imgwrap" />
+                <div className={cx('imgwrap')} />
               </li>
             </ul>
             <button>쿠폰 사용하러 가기</button>
@@ -80,7 +77,7 @@ const CouponDownload = () => {
         </div>
       </div>
       <div className={cx("notice")}>
-        <div className="notice__title">쿠폰 사용 안내</div>
+        <div className={cx('notice__title')}>쿠폰 사용 안내</div>
         <ul>
           <li>· 해당 쿠폰은 중복 사용이 불가합니다.</li>
           <li>
