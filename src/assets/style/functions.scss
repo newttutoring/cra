@@ -12,6 +12,12 @@ $pc: 1200;
   @if($type == 'roboto') {
     font-family: 'Roboto-Medium';
   }
+  @if($type == 'jalnan') {
+    font-family: 'jalnan';
+  }
+  @if($type == 'go') {
+    font-family: 'go';
+  }
 }
 
 // 미디어쿼리 정의

@@ -57,3 +57,33 @@
   src: url('./Roboto/Roboto-Thin.ttf') format('truetype');
   font-weight: 200;
 }
+
+
+//jalnan 
+@font-face {
+  font-family: 'jalnan';
+  src: url('./Jalnan//Jalnan\ font\ OTF.otf') format('opentype');
+  font-weight: 400;
+}
+
+//Gotham 
+@font-face {
+  font-family: 'go';
+  src: url('./Gotham/GothamRounded-Light.otf') format('opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'go';
+  src: url('./Gotham/GothamRounded-Book.otf') format('opentype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'go';
+  src: url('./Gotham/GothamRounded-Medium.otf') format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'go';
+  src: url('./Gotham/GothamRounded-Bold.otf') format('opentype');
+  font-weight: 600;
+}

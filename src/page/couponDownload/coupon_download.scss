@@ -1,0 +1,294 @@
+@import '../../assets/style/functions.scss';
+$font-chk: 'false';
+// text-indent 
+@mixin text-indent($pixel, $type: 'true') {
+  @if ($type=='true') {
+    padding-left: #{$pixel};
+    text-indent: -#{$pixel};
+  }
+
+  @if ($type=='init') {
+    padding-left: 0;
+    text-indent: 0;
+  }
+}
+
+.coupon-download-page {
+  background: #06BF9D;
+  // 색종이 조각(confetti)
+  .confetti-wrap {
+    position: relative;
+    max-width: 768px;
+    height: 175px;
+    overflow: hidden;
+
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 315px;
+    top: 0;
+  }
+
+  $yellow: #ffd300;
+  $blue: #5D04D9;
+  $pink: #F24B4B;
+
+  $duration: 2400;
+
+  // svg 배경
+  $map-svg-bg: (
+    1: '#F24B4B', 
+    2: '#5D04D9'
+  );
+
+  @function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+    @return $randomNum;
+  }
+
+  @keyframes makeItRain {
+    from {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    to {
+      transform: translateY(315px);
+    }
+  }
+
+  .confetti-piece {
+    position: absolute;
+    // width: 8px;
+    // height: 16px;
+    // background: black;
+    width: 15px;
+    height: 7px;
+    background: url('http://res.tutoring.co.kr/res/images/common/confetti/confetti1.svg') no-repeat center;
+    background-size: contain;
+    top: 0;
+    opacity: 0;
+
+    @for $i from 1 through 99 {
+      &:nth-child(#{$i}) {
+        left: ($i * 10%) - 1%;
+        transform: rotate(#{randomNum(0,360)}deg);
+        animation: makeItRain $duration * 1ms infinite ease-out;
+        animation-delay: #{randomNum(0, $duration * .5)}ms;
+        animation-duration: #{randomNum($duration * .7, $duration * 1.2)}ms
+      }
+    }
+
+    &:nth-child(odd) {
+      // background: $blue;
+      width: 12px;
+      height: 17px;
+      background: url('http://res.tutoring.co.kr/res/images/common/confetti/confetti2.svg') no-repeat center;
+      background-size: contain;
+    }
+
+    &:nth-child(even) {
+      z-index: 1;
+    }
+
+    &:nth-child(4n) {
+      width: 15px;
+      height: 7px;
+      animation-duration: $duration * 2ms;
+    }
+
+    &:nth-child(3n) {
+      width: 12px;
+      height: 17px;
+      animation-duration: $duration * 2.5ms;
+      animation-delay: $duration * 1ms;
+    }
+
+    &:nth-child(4n-7) {
+      // background: $pink;
+      width: 15px;
+      height: 16px;
+      background: url('http://res.tutoring.co.kr/res/images/common/confetti/confetti3.svg') no-repeat center;
+      background-size: contain;
+    }
+  }
+  
+  .test {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><polygon fill='rgba(23, 114, 248, 0.999)' points='20.62 55.62 45.74 30.5 20.62 5.38 16.38 9.62 37.26 30.5 16.38 51.38 20.62 55.62'/></svg>") no-repeat;
+    // background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='16' viewBox='0 0 15 16' fill='none'><path d='M6.8 0C6.8 0 3.34 5.93 0.380005 7.41L10.26 15.31L14.71 7.65L6.8 0Z' fill='#5D04D9'/></svg>") no-repeat;
+    background-size: contain;
+    path {
+      fill: black;
+    }
+  }
+  .content-wrap {
+    position: relative;
+    padding: 175px 40px 100px 40px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  @keyframes swing {
+    0% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(-5deg);
+    }
+  }
+  .page-title {
+    position: relative;
+    font-size: 52px;
+    line-height: 57px;
+    color: white;
+    @if( $font-chk == 'true') {
+      @include font(jalnan);
+    }
+    &:after {
+      position: absolute;
+      right: -27px;
+      top: -80px;
+      background: url('http://res.tutoring.co.kr/res/images/common/character/tudal.png') no-repeat center;
+      background-size: contain;
+      width: 149px;
+      height: 128px;
+      animation: swing infinite 1.6s linear;
+      content:'';
+    }
+  }
+  .desc {
+    margin-top: 15px;
+    color: white;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+  }
+  .coupon-area {
+    margin-top: 80px;
+    .title {
+      margin-bottom: 20px;
+      color: white;
+      font-size: 20px;
+      @if( $font-chk == 'true') {
+        @include font(jalnan);
+      }
+    }
+    .coupon-wrap {
+      margin-bottom: 80px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @mixin type($type : 'basic') {
+        $global-color: '';
+        $used-color: #999;
+        @if ($type == 'month') {
+          $global-color: #5D04D9;
+        }
+        @if ($type == 'event') {
+          $global-color: #F24B4B;
+        }
+        li {
+          display: flex;
+          margin-bottom: 10px;
+          padding: 0 20px 0 30px;
+          background: white;
+          height: 100px;
+          border-radius: 15px;
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+          box-sizing: border-box;
+          justify-content: space-between;
+          align-items: center;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &.is-download {
+            .textwrap {
+              span {
+                color: $used-color;
+              }
+            }
+            .imgwrap {
+              background: $used-color  url('http://res.tutoring.co.kr/res/images/common/ico/coupon_arrow.svg') no-repeat center;
+              background-size: 12px 19px;
+              border-radius: 50%;
+            }
+          }
+          .textwrap {
+            text-align: center;
+            span {
+              color: $global-color;
+              font-size: 35px;
+              letter-spacing: -0.5px;
+              @if( $font-chk == 'true') { 
+                @include font(go);
+              }
+            }
+            p {
+              margin-top: 7px;
+              font-size: 12px;
+              letter-spacing: -0.5px;
+            }
+          }
+          .imgwrap {
+            width: 60px;
+            height: 60px;
+            background: $global-color url('http://res.tutoring.co.kr/res/images/common/ico/coupon_arrow.svg') no-repeat center;
+            background-size: 12px 19px;
+            border-radius: 50%;
+          }
+        }
+        button {
+          display: inline-flex;
+          width: 100%;
+          margin-top: 30px;
+          height: 56px;
+          border-radius: 10px;
+          background: $global-color;
+          color: white;
+          align-items: center;
+          font-size: 15px;
+          justify-content: center;
+          font-weight: 500;
+          line-height: 2;
+        }
+      }
+      &.month {
+        @include type(month);
+      }
+      &.event {
+        @include type(event);
+      }
+    }
+  }
+
+
+  .notice {
+    padding: 37px 20px 30px 20px;
+    background: #03604F;
+    &__title {
+      margin-bottom: 16px;
+      color: white;
+      font-size: 14px;
+      letter-spacing: -1px;
+      font-weight: 600;
+    }
+    ul {
+      color: #06BF9D;
+      font-size: 10px;
+      line-height: 17px;
+      letter-spacing: -0.5px;
+      li {
+        @include text-indent(8px);
+      }
+    }
+  }
+}

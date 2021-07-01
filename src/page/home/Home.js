@@ -9,6 +9,8 @@ const Link = `
     <Route exact path="/result" component={LearnConsultReserveResult} />
     {/* 짜요 다왔다 */}
     <Route exact path="/arrive" component={Arrive} />
+    {/* 쿠폰 다운로드페이지 */}
+    <Route exact path="/coupon-download" component={CouponDownload} />
   `
 
 
