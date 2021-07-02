@@ -131,7 +131,9 @@ $font-chk: 'false';
   }
   .content-wrap {
     position: relative;
-    padding: 175px 40px 100px 40px;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 175px 0px 100px 0px;
     box-sizing: border-box;
     z-index: 1;
   }
@@ -173,6 +175,7 @@ $font-chk: 'false';
     letter-spacing: -0.5px;
   }
   .coupon-area {
+    
     margin-top: 80px;
     .title {
       margin-bottom: 20px;
@@ -200,6 +203,7 @@ $font-chk: 'false';
           display: flex;
           img {
             display: block;
+            border-radius: 15px;
             box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
           }
         }

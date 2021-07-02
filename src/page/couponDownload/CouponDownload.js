@@ -40,7 +40,7 @@ const CouponDownload = () => {
             <div className={cx('title')}>이달의 쿠폰</div>
             <ul>
               <li className={cx("")}>
-                <img src="" alt="" />
+                <img src="http://6thfinger.com/images/month_5000.png" alt="" />
               </li>
               <li>
                 <img src="" alt="" />
