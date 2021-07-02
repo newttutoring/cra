@@ -39,18 +39,11 @@ const CouponDownload = () => {
           <div className={cx("coupon-wrap", "month")}>
             <div className={cx('title')}>이달의 쿠폰</div>
             <ul>
-              {/* 다운로드가 된 쿠폰ㅇ일 경우 is-download */}
-              <li className={cx("is-download")}>
-                <div className={cx('textwrap')}>
-                  <span>5,000</span> <p>10만원 이상 결제 시 사용 가능</p>
-                </div>
-                <div className={cx('imgwrap')} />
+              <li className={cx("")}>
+                <img src="" alt="" />
               </li>
               <li>
-                <div className={cx('textwrap')}>
-                  <span>5,000</span> <p>10만원 이상 결제 시 사용 가능</p>
-                </div>
-                <div className={cx('imgwrap')} />
+                <img src="" alt="" />
               </li>
             </ul>
             <button>쿠폰 사용하러 가기</button>
@@ -60,16 +53,10 @@ const CouponDownload = () => {
             <div className={cx('title')}>이벤트 쿠폰</div>
             <ul>
               <li>
-                <div className={cx('textwrap')}>
-                  <span>5,000</span> <p>10만원 이상 결제 시 사용 가능</p>
-                </div>
-                <div className={cx('imgwrap')} />
+                <img src="" alt="" />
               </li>
               <li>
-                <div className={cx('textwrap')}>
-                  <span>5,000</span> <p>10만원 이상 결제 시 사용 가능</p>
-                </div>
-                <div className={cx('imgwrap')} />
+                <img src="" alt="" />
               </li>
             </ul>
             <button>쿠폰 사용하러 가기</button>
